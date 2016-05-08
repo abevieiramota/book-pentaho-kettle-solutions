@@ -1,0 +1,4 @@
+HourPartitioner.Exception.NotAFilename=Field ''{0}'' needs to be a filename (String) with an 24-hour 2-digit number right before the file extension.
+HourPartitioner.Exception.PartitioningFieldNotFound=Unable to find hour partitioning field name [{0}] in output row... {1}
+HourPartitionerDescription=Hour partitioner
+HourPartitionerTooltip=Mod partitions on the last 2 digits (hour) before the extension of a filename

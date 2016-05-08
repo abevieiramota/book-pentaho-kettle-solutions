@@ -1,0 +1,1699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>dim_film</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#47;sakila_data_vault_to_star</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <modified_user>admin</modified_user>
+  <modified_date>2010&#47;05&#47;17 12:00:58.000</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>get all rows from the Data Vault</note>
+      <xloc>422</xloc>
+      <yloc>3</yloc>
+      <width>163</width>
+      <heigth>22</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Provide readable text for 
+rating codes like PG, PG-13, NC-17 etc.</note>
+      <xloc>421</xloc>
+      <yloc>86</yloc>
+      <width>204</width>
+      <heigth>35</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Turn special features list
+into separate rows (normalize)</note>
+      <xloc>199</xloc>
+      <yloc>162</yloc>
+      <width>158</width>
+      <heigth>35</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Flatten special feature rows
+so that each special feature 
+has its own Yes&#47;No column (denormalize)</note>
+      <xloc>650</xloc>
+      <yloc>114</yloc>
+      <width>213</width>
+      <heigth>47</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Turn film categories (n:m)
+into separated rows (join)</note>
+      <xloc>769</xloc>
+      <yloc>321</yloc>
+      <width>141</width>
+      <heigth>35</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Flatten category rows
+so that each category
+gets its own Yes&#47;No column (denormalize)</note>
+      <xloc>457</xloc>
+      <yloc>322</yloc>
+      <width>216</width>
+      <heigth>47</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Select values and insert or update where appropriate</note>
+      <xloc>429</xloc>
+      <yloc>476</yloc>
+      <width>267</width>
+      <heigth>22</heigth>
+      <fontname>Microsoft Sans Serif</fontname>
+      <fontsize>8</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>sakila</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>sakila</database>
+    <port>3306</port>
+    <username>sakila</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79bd71d59ba3db</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>sakila_data_vault</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>sakila_data_vault</database>
+    <port>3306</port>
+    <username>sakila_dv</username>
+    <password>Encrypted 2be98afc86aa7f297aa12a77cdfadabcc</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>sakila_dwh</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>sakila_dwh</database>
+    <port>3306</port>
+    <username>sakila_dwh</username>
+    <password>Encrypted 2be98afc86aa78185a010a271e196b8d2</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.characterEncoding</code><attribute>UTF8</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SQL_CONNECT</code><attribute>set sql_mode := &apos;&apos;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>input data vault</from><to>Rating Text</to><enabled>Y</enabled> </hop>  <hop> <from>Add Yes&#47;No</from><to>Denormalize Special Features to &apos;Yes&apos; Columns</to><enabled>Y</enabled> </hop>  <hop> <from>Denormalize Special Features to &apos;Yes&apos; Columns</from><to>Set Empty Special Feature Columns  to &apos;No&apos;</to><enabled>Y</enabled> </hop>  <hop> <from>Rating Text</from><to>Normalize Special Features</to><enabled>Y</enabled> </hop>  <hop> <from>Normalize Special Features</from><to>Add Yes&#47;No</to><enabled>Y</enabled> </hop>  <hop> <from>Set Empty Special Feature Columns  to &apos;No&apos;</from><to>Lookup film_category</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup film_category</from><to>Lookup category</to><enabled>Y</enabled> </hop>  <hop> <from>Add Yes</from><to>Denormalize Categories to &apos;Yes&apos; Columns</to><enabled>Y</enabled> </hop>  <hop> <from>Denormalize Categories to &apos;Yes&apos; Columns</from><to>Set Empty Category Columns to &apos;No&apos;</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup category</from><to>Add Yes</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Insert &#47; Update</to><enabled>Y</enabled> </hop>  <hop> <from>Set Empty Category Columns to &apos;No&apos;</from><to>Select values</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>Add Yes</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Yes</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>Yes</nullif>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>679</xloc>
+      <yloc>267</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add Yes&#47;No</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Yes</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>Yes</nullif>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>No</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>No</nullif>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>472</xloc>
+      <yloc>177</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Denormalize Categories to &apos;Yes&apos; Columns</name>
+    <type>Denormaliser</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <key_field>category_name</key_field>
+      <group>
+        <field>
+          <name>film_id</name>
+          </field>
+        <field>
+          <name>film_last_update</name>
+          </field>
+        <field>
+          <name>hub_film_id</name>
+          </field>
+        <field>
+          <name>film_title</name>
+          </field>
+        <field>
+          <name>film_description</name>
+          </field>
+        <field>
+          <name>film_release_year</name>
+          </field>
+        <field>
+          <name>film_language</name>
+          </field>
+        <field>
+          <name>film_original_language</name>
+          </field>
+        <field>
+          <name>film_rental_duration</name>
+          </field>
+        <field>
+          <name>film_rental_rate</name>
+          </field>
+        <field>
+          <name>film_duration</name>
+          </field>
+        <field>
+          <name>film_replacement_cost</name>
+          </field>
+        <field>
+          <name>film_rating_code</name>
+          </field>
+        <field>
+          <name>tmp_special_features</name>
+          </field>
+        <field>
+          <name>film_rating_text</name>
+          </field>
+        <field>
+          <name>No</name>
+          </field>
+        <field>
+          <name>tmp_has_trailers</name>
+          </field>
+        <field>
+          <name>tmp_has_commentaries</name>
+          </field>
+        <field>
+          <name>tmp_has_deleted_scenes</name>
+          </field>
+        <field>
+          <name>tmp_has_behind_the_scenes</name>
+          </field>
+        <field>
+          <name>film_has_behind_the_scenes</name>
+          </field>
+        <field>
+          <name>film_has_commentaries</name>
+          </field>
+        <field>
+          <name>film_has_deleted_scenes</name>
+          </field>
+        <field>
+          <name>film_has_trailers</name>
+          </field>
+        <field>
+          <name>category_name</name>
+          </field>
+        <field>
+          <name>Yes</name>
+          </field>
+        </group>
+      <fields>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Action</key_value>
+          <target_name>tmp_is_category_action</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Animation</key_value>
+          <target_name>tmp_is_category_animation</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Children</key_value>
+          <target_name>tmp_is_category_children</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Classics</key_value>
+          <target_name>tmp_is_category_classics</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Comedy</key_value>
+          <target_name>tmp_is_category_comedy</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Documentary</key_value>
+          <target_name>tmp_is_category_documentary</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Drama</key_value>
+          <target_name>tmp_is_category_drama</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Family</key_value>
+          <target_name>tmp_is_category_family</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Foreign</key_value>
+          <target_name>tmp_is_category_foreign</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Games</key_value>
+          <target_name>tmp_is_category_games</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Horror</key_value>
+          <target_name>tmp_is_category_horror</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Music</key_value>
+          <target_name>tmp_is_category_music</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>New</key_value>
+          <target_name>tmp_is_category_new</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Sci-Fi</key_value>
+          <target_name>tmp_is_category_scifi</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Sports</key_value>
+          <target_name>tmp_is_category_sports</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Travel</key_value>
+          <target_name>tmp_is_category_travel</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>555</xloc>
+      <yloc>267</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Denormalize Special Features to &apos;Yes&apos; Columns</name>
+    <type>Denormaliser</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <key_field>special_feature</key_field>
+      <group>
+        <field>
+          <name>film_id</name>
+          </field>
+        <field>
+          <name>film_last_update</name>
+          </field>
+        <field>
+          <name>hub_film_id</name>
+          </field>
+        <field>
+          <name>film_title</name>
+          </field>
+        <field>
+          <name>film_description</name>
+          </field>
+        <field>
+          <name>film_release_year</name>
+          </field>
+        <field>
+          <name>film_language</name>
+          </field>
+        <field>
+          <name>film_original_language</name>
+          </field>
+        <field>
+          <name>film_rental_duration</name>
+          </field>
+        <field>
+          <name>film_rental_rate</name>
+          </field>
+        <field>
+          <name>film_duration</name>
+          </field>
+        <field>
+          <name>film_replacement_cost</name>
+          </field>
+        <field>
+          <name>film_rating_code</name>
+          </field>
+        <field>
+          <name>tmp_special_features</name>
+          </field>
+        <field>
+          <name>film_rating_text</name>
+          </field>
+        <field>
+          <name>special_feature</name>
+          </field>
+        <field>
+          <name>Yes</name>
+          </field>
+        <field>
+          <name>No</name>
+          </field>
+        </group>
+      <fields>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Trailers</key_value>
+          <target_name>tmp_has_trailers</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Commentaries</key_value>
+          <target_name>tmp_has_commentaries</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Deleted Scenes</key_value>
+          <target_name>tmp_has_deleted_scenes</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        <field>
+          <field_name>Yes</field_name>
+          <key_value>Behind the Scenes</key_value>
+          <target_name>tmp_has_behind_the_scenes</target_name>
+          <target_type>String</target_type>
+          <target_format/>
+          <target_length>-1</target_length>
+          <target_precision>-1</target_precision>
+          <target_decimal_symbol/>
+          <target_grouping_symbol/>
+          <target_currency_symbol/>
+          <target_null_string/>
+          <target_aggregation_type>-</target_aggregation_type>
+          </field>
+        </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>626</xloc>
+      <yloc>177</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#47; Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>sakila_dwh</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>dim_film</table>
+      <key>
+        <name>film_id</name>
+        <field>film_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>film_last_update</name>
+        <rename>film_last_update</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_id</name>
+        <rename>film_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_title</name>
+        <rename>film_title</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_description</name>
+        <rename>film_description</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_release_year</name>
+        <rename>film_release_year</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_language</name>
+        <rename>film_language</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_original_language</name>
+        <rename>film_original_language</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_rental_duration</name>
+        <rename>film_rental_duration</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_rental_rate</name>
+        <rename>film_rental_rate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_duration</name>
+        <rename>film_duration</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_replacement_cost</name>
+        <rename>film_replacement_cost</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_rating_code</name>
+        <rename>film_rating_code</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_rating_text</name>
+        <rename>film_rating_text</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_has_behind_the_scenes</name>
+        <rename>film_has_behind_the_scenes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_has_commentaries</name>
+        <rename>film_has_commentaries</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_has_deleted_scenes</name>
+        <rename>film_has_deleted_scenes</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_has_trailers</name>
+        <rename>film_has_trailers</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_action</name>
+        <rename>film_in_category_action</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_animation</name>
+        <rename>film_in_category_animation</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_children</name>
+        <rename>film_in_category_children</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_classics</name>
+        <rename>film_in_category_classics</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_comedy</name>
+        <rename>film_in_category_comedy</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_documentary</name>
+        <rename>film_in_category_documentary</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_drama</name>
+        <rename>film_in_category_drama</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_family</name>
+        <rename>film_in_category_family</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_foreign</name>
+        <rename>film_in_category_foreign</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_games</name>
+        <rename>film_in_category_games</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_horror</name>
+        <rename>film_in_category_horror</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_music</name>
+        <rename>film_in_category_music</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_new</name>
+        <rename>film_in_category_new</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_scifi</name>
+        <rename>film_in_category_scifi</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_sports</name>
+        <rename>film_in_category_sports</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>film_in_category_travel</name>
+        <rename>film_in_category_travel</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>518</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lookup category</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>sakila_data_vault</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>hub_category</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>hub_category_id</name>
+        <field>hub_category_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>category_name</name>
+        <rename>category_name</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>753</xloc>
+      <yloc>268</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lookup film_category</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>sakila_data_vault</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>link_film_category</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>hub_film_id</name>
+        <field>hub_film_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>hub_category_id</name>
+        <rename>hub_category_id</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>844</xloc>
+      <yloc>267</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Normalize Special Features</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>tmp_special_features</splitfield>
+   <delimiter>,</delimiter>
+   <newfield>special_feature</newfield>
+   <rownum>N</rownum>
+   <rownum_field/>
+   <resetrownumber>N</resetrownumber>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>371</xloc>
+      <yloc>177</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rating Text</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>film_rating_code</field_to_use>
+    <target_field>film_rating_text</target_field>
+    <non_match_default>Not Yet Rated</non_match_default>
+    <fields>
+      <field>
+        <source_value>G</source_value>
+        <target_value>General Audiences</target_value>
+      </field>
+      <field>
+        <source_value>PG</source_value>
+        <target_value>Parental Guidance Suggested</target_value>
+      </field>
+      <field>
+        <source_value>PG-13</source_value>
+        <target_value>Parents Strongly Cautioned</target_value>
+      </field>
+      <field>
+        <source_value>R</source_value>
+        <target_value>Restricted</target_value>
+      </field>
+      <field>
+        <source_value>NC-17</source_value>
+        <target_value>No One Under 17 Admitted </target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>369</xloc>
+      <yloc>91</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>film_last_update</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_title</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_description</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_release_year</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_language</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_original_language</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_rental_duration</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_rental_rate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_duration</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_replacement_cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_rating_code</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_rating_text</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_has_behind_the_scenes</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_has_commentaries</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_has_deleted_scenes</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_has_trailers</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_action</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_animation</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_children</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_classics</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_comedy</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_documentary</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_drama</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_family</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_foreign</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_games</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_horror</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_music</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_new</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_scifi</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_sports</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_in_category_travel</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>369</xloc>
+      <yloc>424</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set Empty Category Columns to &apos;No&apos;</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>film_in_category_action</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_action</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_animation</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_animation</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_children</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_children</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_classics</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_classics</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_comedy</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_comedy</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_documentary</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_documentary</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_drama</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_drama</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_family</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_family</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_foreign</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_foreign</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_games</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_games</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_horror</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_horror</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_music</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_music</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_new</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_new</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_scifi</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_scifi</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_sports</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_sports</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_in_category_travel</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_is_category_travel</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>371</xloc>
+      <yloc>267</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set Empty Special Feature Columns  to &apos;No&apos;</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>film_has_behind_the_scenes</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_has_behind_the_scenes</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_has_commentaries</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_has_commentaries</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_has_deleted_scenes</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_has_deleted_scenes</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>film_has_trailers</field_name>
+<calc_type>NVL</calc_type>
+<field_a>tmp_has_trailers</field_a>
+<field_b>No</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>843</xloc>
+      <yloc>177</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>input data vault</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>sakila_data_vault</connection>
+    <sql>SELECT
+  sf.last_update AS film_last_update
+, hf.film_id AS film_id
+, hf.hub_film_id
+, sf.title AS film_title
+, sf.description AS film_description
+, sf.release_year AS film_release_year
+, sf.language AS film_language
+, IFNULL(sf.original_language, &apos;Not Applicable&apos;) AS film_original_language
+, sf.rental_duration AS film_rental_duration
+, sf.rental_rate AS film_rental_rate
+, sf.length AS film_duration
+, sf.replacement_cost AS film_replacement_cost
+, sf.rating AS film_rating_code
+, sf.special_features AS tmp_special_features
+FROM
+	sat_film sf
+INNER JOIN 
+	hub_film hf
+USING
+	(hub_film_id)
+WHERE
+	sf.load_end_dts IS NULL
+ORDER BY
+	hf.film_id</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>369</xloc>
+      <yloc>3</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>

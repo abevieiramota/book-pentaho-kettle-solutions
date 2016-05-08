@@ -1,0 +1,21 @@
+Column0|Column1|[Gross Profit]|[Sales Amount]
+CY 2001|Accessories|$8,171.48|$20,235.36
+|Bikes|$1,580,237.72|$10,661,722.28
+|Clothing|($1,911.73)|$34,376.34
+|Components|$54,035.47|$615,474.98
+CY 2002|Accessories|$28,351.25|$92,735.35
+|Bikes|$2,413,803.00|$26,486,358.20
+|Clothing|$102,113.92|$485,587.15
+|Components|$425,983.77|$3,610,092.47
+CY 2003|Accessories|$283,673.27|$590,242.59
+|Bikes|$3,050,962.76|$34,910,877.69
+|Clothing|$154,607.64|$1,010,112.16
+|Components|$414,931.73|$5,482,497.29
+CY 2004|Accessories|$314,271.16|$568,844.58
+|Bikes|$3,470,093.14|$22,561,568.03
+|Clothing|$114,026.17|$587,537.80
+|Components|$138,015.51|$2,091,011.92
+CY 2006|Accessories||
+|Bikes||
+|Clothing||
+|Components||

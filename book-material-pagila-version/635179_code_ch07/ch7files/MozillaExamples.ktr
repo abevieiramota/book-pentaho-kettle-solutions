@@ -1,0 +1,2608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Mozilla Examples</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#47;Ch07</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit/>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <modified_user>admin</modified_user>
+  <modified_date>2010&#47;07&#47;24 22:41:52.906</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Example of testing gzipped files to ensure they can be read before using them in a Text File Input step</note>
+      <xloc>50</xloc>
+      <yloc>0</yloc>
+      <width>549</width>
+      <heigth>28</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Example of fixup for single bad version
+(UDJC because it hits every row)</note>
+      <xloc>0</xloc>
+      <yloc>400</yloc>
+      <width>210</width>
+      <heigth>46</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Standard data validation &amp; correction</note>
+      <xloc>245</xloc>
+      <yloc>407</yloc>
+      <width>199</width>
+      <heigth>28</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Filter internal IPs and
+coarse but higher performance
+filters for desired URLs (has false positives)</note>
+      <xloc>582</xloc>
+      <yloc>249</yloc>
+      <width>233</width>
+      <heigth>64</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Regex captures fields needed for ETL but
+also has a look-ahead to accept only
+valid URLs we are interested in</note>
+      <xloc>587</xloc>
+      <yloc>350</yloc>
+      <width>227</width>
+      <heigth>64</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Several examples of filtering and correcting bad data</note>
+      <xloc>36</xloc>
+      <yloc>452</yloc>
+      <width>282</width>
+      <heigth>28</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>255</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>N</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>Foodmart</name>
+    <server>10.0.0.65</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>foodmart</database>
+    <port>3306</port>
+    <username>foodmart</username>
+    <password>Encrypted 2be98afc86aa7f2e4ad16a174d393bdce</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PaloDemo</name>
+    <server>10.0.0.71</server>
+    <type>PALO</type>
+    <access>Plugin</access>
+    <database>Demo</database>
+    <port>7778</port>
+    <username>admin</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>7778</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PaloTest</name>
+    <server>10.0.0.71</server>
+    <type>PALO</type>
+    <access>Plugin</access>
+    <database>Demo</database>
+    <port>7778</port>
+    <username>admin</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce71da9fa6d4</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>7778</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>sakila</name>
+    <server>10.0.0.169</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>sakila</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e49f11a17cd7819082</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>sakila_dwh</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>sakila_dwh</database>
+    <port>3306</port>
+    <username>sakila_dwh</username>
+    <password>Encrypted 2be98afc86aa78185a010a271e196b8d2</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>sakila_stg</name>
+    <server>localhost</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>sakila_stg</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e49f11a17cd7819082</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Add filename</from><to>Output unparsable_files</to><enabled>Y</enabled> </hop>  <hop> <from>Add okay=0</from><to>Sort rows</to><enabled>Y</enabled> </hop>  <hop> <from>Add okay=1</from><to>Sort rows</to><enabled>Y</enabled> </hop>  <hop> <from>Build test cmd</from><to>Execute a process</to><enabled>Y</enabled> </hop>  <hop> <from>Calc all_okay_to_process</from><to>Filter servers with bad files</to><enabled>Y</enabled> </hop>  <hop> <from>Execute a process</from><to>Filter bad files</to><enabled>Y</enabled> </hop>  <hop> <from>Filter bad files</from><to>Add okay=0</to><enabled>Y</enabled> </hop>  <hop> <from>Filter bad files</from><to>Add okay=1</to><enabled>Y</enabled> </hop>  <hop> <from>Filter out good files</from><to>Add filename</to><enabled>Y</enabled> </hop>  <hop> <from>Filter servers with bad files</from><to>Filter out good files</to><enabled>Y</enabled> </hop>  <hop> <from>Filter servers with bad files</from><to>Sort by size</to><enabled>Y</enabled> </hop>  <hop> <from>Get File Names</from><to>Log filenames</to><enabled>Y</enabled> </hop>  <hop> <from>Log filenames</from><to>Build test cmd</to><enabled>Y</enabled> </hop>  <hop> <from>Log patterns</from><to>Get File Names</to><enabled>Y</enabled> </hop>  <hop> <from>Output unparsable_files</from><to>Set files in result</to><enabled>Y</enabled> </hop>  <hop> <from>Rename directory</from><to>Log patterns</to><enabled>Y</enabled> </hop>  <hop> <from>Select filenames</from><to>Copy rows to result</to><enabled>Y</enabled> </hop>  <hop> <from>Sort by size</from><to>Select filenames</to><enabled>Y</enabled> </hop>  <hop> <from>Sort rows</from><to>Calc all_okay_to_process</to><enabled>Y</enabled> </hop>  <hop> <from>Fixup Fennec beta 5</from><to>Regex product capture</to><enabled>Y</enabled> </hop>  <hop> <from>Regex product capture</from><to>Validate product fields</to><enabled>Y</enabled> </hop>  <hop> <from>Split URL</from><to>Fixup Fennec beta 5</to><enabled>Y</enabled> </hop>  <hop> <from>Validate product fields</from><to>Flag invalid product strings</to><enabled>Y</enabled> </hop>  <hop> <from>Validate product fields</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>Flag invalid product strings</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>Text file input</from><to>Regex amo requests</to><enabled>Y</enabled> </hop>  <hop> <from>Data Validator</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Data Validator</from><to>Reservoir Sampling</to><enabled>Y</enabled> </hop>  <hop> <from>Filter escaped addon_guid</from><to>Filter escaped addon_version</to><enabled>Y</enabled> </hop>  <hop> <from>Filter escaped addon_guid</from><to>Unescape addon_guid</to><enabled>Y</enabled> </hop>  <hop> <from>Filter escaped addon_version</from><to>Strip product_guid braces</to><enabled>Y</enabled> </hop>  <hop> <from>Filter escaped addon_version</from><to>Unescape addon_version</to><enabled>Y</enabled> </hop>  <hop> <from>Filter malformed requests</from><to>Fix malformed requests</to><enabled>Y</enabled> </hop>  <hop> <from>Filter malformed requests</from><to>Split URL params</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>Lowercase addon</to><enabled>Y</enabled> </hop>  <hop> <from>Fix malformed requests</from><to>Split URL params</to><enabled>Y</enabled> </hop>  <hop> <from>Fixup product_locale</from><to>Data Validator</to><enabled>Y</enabled> </hop>  <hop> <from>Mapping input specification</from><to>Filter malformed requests</to><enabled>Y</enabled> </hop>  <hop> <from>Reservoir Sampling</from><to>Write to log</to><enabled>Y</enabled> </hop>  <hop> <from>Split URL params</from><to>Filter escaped addon_guid</to><enabled>Y</enabled> </hop>  <hop> <from>Strip product_guid braces</from><to>Fixup product_locale</to><enabled>Y</enabled> </hop>  <hop> <from>Unescape addon_guid</from><to>Filter escaped addon_version</to><enabled>Y</enabled> </hop>  <hop> <from>Unescape addon_version</from><to>Strip product_guid braces</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>Add filename</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>results_filename</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>&#47;etl&#47;output&#47;unparsable_filenames.txt</nullif>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>750</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add okay=0</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>okay_to_process</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>450</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add okay=1</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>okay_to_process</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>1</nullif>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>350</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Build test cmd</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>cmd_prefix</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>gzip -l </field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>cmd</field_name>
+<calc_type>ADD</calc_type>
+<field_a>cmd_prefix</field_a>
+<field_b>filename</field_b>
+<field_c/>
+<value_type>String</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>250</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calc all_okay_to_process</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>Y</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>datacenter</name>
+        </field>
+        <field>
+          <name>site</name>
+        </field>
+        <field>
+          <name>server</name>
+        </field>
+        <field>
+          <name>timestamp</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>all_okay_to_process</aggregate>
+          <subject>okay_to_process</subject>
+          <type>MIN</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>550</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Copy rows to result</name>
+    <type>RowsToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>850</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Data Validator</name>
+    <type>Validator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<validate_all>N</validate_all>
+<concat_errors>N</concat_errors>
+<concat_separator/>
+       <validator_field><name>max_app_version</name>
+<validation_name>max_app_version</validation_name>
+<max_length>15</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>addon_status</name>
+<validation_name>addon_status</validation_name>
+<max_length>50</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>product_version_raw</name>
+<validation_name>product_version</validation_name>
+<max_length>15</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>product_os</name>
+<validation_name>product_os</validation_name>
+<max_length>10</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>product_build_target</name>
+<validation_name>product_build_target</validation_name>
+<max_length>20</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>addon_version_raw</name>
+<validation_name>addon_version</validation_name>
+<max_length>255</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>addon_guid_raw</name>
+<validation_name>addon_guid</validation_name>
+<max_length>255</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>update_type</name>
+<validation_name>update_type</validation_name>
+<max_length>-1</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>Y</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>737</xloc>
+      <yloc>506</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>394</xloc>
+      <yloc>248</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute a process</name>
+    <type>ExecProcess</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <processfield>cmd</processfield>
+    <resultfieldname>result</resultfieldname>
+    <errorfieldname/>
+    <exitvaluefieldname/>
+    <failwhennotsuccess>N</failwhennotsuccess>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>250</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter bad files</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Add okay=1</send_true_to>
+<send_false_to>Add okay=0</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>result</leftvalue>
+ <function>IS NOT NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>350</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter escaped addon_guid</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Unescape addon_guid</send_true_to>
+<send_false_to>Filter escaped addon_version</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <leftvalue>addon_guid_raw</leftvalue>
+   <function>REGEXP</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>(?:[^%]*+(?&gt;%[0-9a-fA-F]{2})?)++</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>329</xloc>
+      <yloc>505</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter escaped addon_version</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Unescape addon_version</send_true_to>
+<send_false_to>Strip product_guid braces</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <leftvalue>addon_version_raw</leftvalue>
+   <function>REGEXP</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>(?:[^%]*+(?&gt;%[0-9a-fA-F]{2})?)++</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>473</xloc>
+      <yloc>505</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter malformed requests</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Split URL params</send_true_to>
+<send_false_to>Fix malformed requests</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>url</leftvalue>
+   <function>CONTAINS</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>&amp;appID</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <leftvalue>url</leftvalue>
+   <function>CONTAINS</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>&amp;appVersion</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>74</xloc>
+      <yloc>604</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter out good files</name>
+    <type>Validator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<validate_all>N</validate_all>
+<concat_errors>N</concat_errors>
+<concat_separator>|</concat_separator>
+       <validator_field><name>okay_to_process</name>
+<validation_name>No errors</validation_name>
+<max_length>-1</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>Y</only_numeric_allowed>
+<data_type>Integer</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value><value>1</value>
+</allowed_value></validator_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>650</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>update_type</leftvalue>
+ <function>IN LIST</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>0;112</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>837</xloc>
+      <yloc>506</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter servers with bad files</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Sort by size</send_true_to>
+<send_false_to>Filter out good files</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>all_okay_to_process</leftvalue>
+ <function>=</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>550</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Fix malformed requests</name>
+    <type>Janino</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>x</field_name>
+<formula_string>url.replaceAll(&quot;([^&amp;])(appID|appVersion)&quot;, &quot;$1&amp;$2&quot;)</formula_string>
+<value_type>String</value_type>
+<value_length>1024</value_length>
+<value_precision>-1</value_precision>
+<replace_field>url</replace_field>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>209</xloc>
+      <yloc>605</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Fixup Fennec beta 5</name>
+    <type>UserDefinedJavaClass</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>RowProcessor</class_name>
+
+        <class_source><![CDATA[public static class Fields {
+	public static class In  { public static FieldHelper product; }
+}
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException
+{
+	Object[] r = getRow();
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+    if (first)
+    {
+        first = false;
+        data.outputRowMeta = getInputRowMeta().clone();
+        meta.getFields(data.outputRowMeta, getStepname(), null, null, parent);
+		Fields.In.product = new FieldHelper(data.inputRowMeta, "product");
+    }
+
+	if ("firefox".equals(Fields.In.product.getString(r))) {
+		Fields.In.product.setValue(r, "fennec-1.0b5");
+        incrementLinesUpdated();
+	}
+
+    putRow(data.outputRowMeta, r);
+	return true;
+}
+
+]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+    </fields><clear_result_fields>Y</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>50</xloc>
+      <yloc>350</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Fixup product_locale</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <script><![CDATA[^
+(   Unknown|
+    (?>[a-z]{2,3})
+    (?>-[A-Za-z]{2}(?>-[\w]{2,8})?)?
+)
+(?>;.*)?
+$]]></script>    <matcher>product_locale_raw</matcher>
+    <resultfieldname>product_locale_matched</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>Y</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>product_locale</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>Unknown</ifnull>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>619</xloc>
+      <yloc>606</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Flag invalid product strings</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>Y</compatible>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+if (product_version_suffix.getString() != null &amp;&amp; product_version_suffix.getString().length() &gt; 20)
+	product_version_suffix.setValue(&quot;Invalid&quot;);
+
+if (str2RegExp(product_platform.getString(), &quot;^None|win(ce|mo)|linux|osx(ppc)?|maemo|(open)?solaris-(sparc|i38x)$&quot;) == null)
+	product_platform.setValue(&quot;Invalid&quot;);
+
+if (str2RegExp(product_locale.getString(), &quot;^None|all|[a-z]{2}(?&gt;-[A-Za-z]{2}(?&gt;-[a-z]{2,8})?)?$&quot;) == null)
+	product_locale.setValue(&quot;Invalid&quot;);</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>394</xloc>
+      <yloc>349</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get File Names</name>
+    <type>GetFileNames</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filter>
+      <filterfiletype>only_files</filterfiletype>
+    </filter>
+    <rownum>N</rownum>
+    <isaddresult>N</isaddresult>
+    <filefield>Y</filefield>
+    <rownum_field/>
+    <filename_Field>directory</filename_Field>
+    <wildcard_Field>filename_pattern</wildcard_Field>
+    <dynamic_include_subfolders>N</dynamic_include_subfolders>
+    <limit>0</limit>
+    <file>
+      <name/>
+      <filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>150</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Log filenames</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>ConcatFilenames</jsScript_name>
+        <jsScript_script>stringToLog += rpad(datacenter, &quot; &quot;, 3) + &quot; - &quot; + rpad(site, &quot; &quot;, 10) + &quot; - &quot; + rpad(server, &quot; &quot;, 20) + &quot; - &quot; + rpad(filename, &quot; &quot;, 122) + &quot; - &quot; + lpad(size, &quot; &quot;, 10) + &quot;\n&quot;;
+</jsScript_script>
+      </jsScript>      <jsScript>        <jsScript_type>1</jsScript_type>
+        <jsScript_name>InitVariable</jsScript_name>
+        <jsScript_script>var stringToLog = &quot;\n&quot;;
+</jsScript_script>
+      </jsScript>      <jsScript>        <jsScript_type>2</jsScript_type>
+        <jsScript_name>LogOutput</jsScript_name>
+        <jsScript_script>writeToLog(&quot;m&quot;,stringToLog);</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>150</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Log patterns</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>ConcatFilenames</jsScript_name>
+        <jsScript_script>stringToLog += directory + &quot;&#47;&quot; + filename_pattern + &quot;\n&quot;;</jsScript_script>
+      </jsScript>      <jsScript>        <jsScript_type>1</jsScript_type>
+        <jsScript_name>InitVariable</jsScript_name>
+        <jsScript_script>var stringToLog = &quot;\n&quot;;
+</jsScript_script>
+      </jsScript>      <jsScript>        <jsScript_type>2</jsScript_type>
+        <jsScript_name>LogOutput</jsScript_name>
+        <jsScript_script>writeToLog(&quot;m&quot;,stringToLog);</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>50</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lowercase addon</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>addon_guid</field_name>
+<calc_type>LOWER_CASE</calc_type>
+<field_a>addon_guid_raw</field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>255</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>addon_version</field_name>
+<calc_type>LOWER_CASE</calc_type>
+<field_a>addon_version_raw</field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>255</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>product_guid</field_name>
+<calc_type>LOWER_CASE</calc_type>
+<field_a>product_guid_raw2</field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>36</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>837</xloc>
+      <yloc>606</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Mapping input specification</name>
+    <type>MappingInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <type>String</type>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>url_params</name>
+        <type>String</type>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+      <field>
+        <name>filename</name>
+        <type>String</type>
+        <length>0</length>
+        <precision>0</precision>
+      </field>
+        <select_unspecified>Y</select_unspecified>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>74</xloc>
+      <yloc>504</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Output unparsable_files</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>	</separator>
+    <enclosure/>
+    <enclosure_forced>N</enclosure_forced>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>Unix</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>Y</fileNameInField>
+    <fileNameField>results_filename</fileNameField>
+    <file>
+      <name/>
+      <is_command>N</is_command>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention/>
+      <append>Y</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>datacenter</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>3</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>site</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>10</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>server</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>20</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>timestamp</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>13</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>filename</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>500</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>result</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>500</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>850</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Regex amo requests</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>3</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <script><![CDATA[^(?>([^\s]{7,15})                      # client_ip
+\s(?>[^\[]+)                           # IDENT and auth fields
+\[(\d{2}/\w{3}/\d{4}                   # request date dd/MMM/yyyy
+:\d{2}:\d{2}:\d{2}\s[-+ ]\d{4})\]      # request time :HH:mm:ss -0800
+\s"(?>[A-Z]+)\s                        # HTTP request type
+)
+                                       # Look-ahead to ensure URL is "interesting"
+(?=/(?:update/VersionCheck.php\?reqVersion|blocklist/[123]/|(?:(?!downloads|addon|collections)[-A-Za-z]*/){2}(?:downloads/file/|addon/(?>\d+/)?share|collections/(?>success|\d+)\?i=)))
+([^\s?]+(?:\?([^\\\s]+))?)               # URL
+(?>\sHTTP/1\.[01]"\s                   # end of the request method/uri/version
+
+[^\s]++\s                              # HTTP status code
+\d+\s)                                 # bytes returned
+(?>"[^"]++"\s)                         # referrer field sometimes a redirect
+
+"                                      # User agent parsing, always quoted.
+"?                                     # Spoofed user agents sometimes have extra quotes.
+([^"]*)                                # UA string
+"?"                                    # Closing quotes for UA string
+.*                                     # Ignore cookies]]></script>    <matcher>line</matcher>
+    <resultfieldname>result</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>Y</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>client_ip_address</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>date</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>url</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>1024</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>url_params</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>1024</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>user_agent</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>1024</length>
+        <precision>-1</precision>
+        <nullif>-</nullif>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>500</xloc>
+      <yloc>350</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Regex product capture</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <script><![CDATA[^([a-z]{4,30}(?>-mobile)?)-
+(
+ (?>
+    alpha\d
+   |
+    (\d)                               #   major numeric
+    \.(\d{1,2}+)                        #   minor numeric
+    (?>
+       ((?:[a-z]+\d?)?(?:pre)?)   #   minor a/b/rc/pre
+       (?=-|$)
+      |
+       \.(\d{1,2})                     #   sub_a numeric
+       (?>
+          ((?:[a-z]+\d)?(?:pre)?) #   sub_a a/b/rc/pre
+          (?=-|$)
+         |
+          \.(\d{1,2})                  #   sub_b numeric
+          ((?:[a-z]+\d)?(?:pre)?) #   sub_b a/b/rc/pre
+          (?=-|$)
+       )
+    )
+ )
+)
+#(?>-([^-]++(?<!-complete|-partial|-update)(?>-[^-]++(?<!-complete|-partial|-update))*))?
+(?>(?!-complete|-partial|-update)-([^-]++(?>(?!-complete|-partial|-update)-[^-]++)*+))?
+
+(?>-(complete|partial|update)(?>(?<=partial)-(alpha\d|[.0-9abcepr]++))?)?
+$]]></script>    <matcher>product</matcher>
+    <resultfieldname>product_result</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>Y</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>product_name</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>20</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>30</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_major</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_minor</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_minor_suffix</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_sub_a</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_sub_a_suffix</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_sub_b</name>
+        <type>Integer</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_sub_b_suffix</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>product_version_suffix</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>20</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>download_type</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>10</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>manual</ifnull>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>upgrade_version</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>20</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>250</xloc>
+      <yloc>250</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rename directory</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>datacenter</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>site</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>server</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>timestamp</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>directory</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename_pattern</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>50</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Reservoir Sampling</name>
+    <type>ReservoirSampling</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<reservoir_sampling><sample_size>10</sample_size>
+<seed>1</seed>
+</reservoir_sampling>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>737</xloc>
+      <yloc>606</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select filenames</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>datacenter</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>site</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>server</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>timestamp</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>750</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set files in result</name>
+    <type>FilesToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<filename_field>results_filename</filename_field>
+<file_type>ERROR</file_type>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>950</xloc>
+      <yloc>150</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort by size</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>out</prefix>
+      <sort_size/>
+      <free_memory>25</free_memory>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>size</name>
+        <ascending>N</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>650</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>out</prefix>
+      <sort_size/>
+      <free_memory>25</free_memory>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>datacenter</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+      <field>
+        <name>site</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+      <field>
+        <name>server</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+      <field>
+        <name>timestamp</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+      <field>
+        <name>filename</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>450</xloc>
+      <yloc>50</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Split URL</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>url</splitfield>
+   <delimiter>&amp;</delimiter>
+    <fields>      <field>        <name>product</name>
+        <id>product=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>30</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_platform</name>
+        <id>os=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>10</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>None</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_locale</name>
+        <id>lang=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>None</ifnull>
+        <trimtype>none</trimtype>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>50</xloc>
+      <yloc>250</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Split URL params</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>url_params</splitfield>
+   <delimiter>&amp;</delimiter>
+    <fields>      <field>        <name>addon_guid_raw</name>
+        <id>id=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>255</length>
+        <precision>-1</precision>
+        <nullif>%ITEM_ID%</nullif>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>addon_version_raw</name>
+        <id>version=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>255</length>
+        <precision>-1</precision>
+        <nullif>%ITEM_VERSION%</nullif>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>max_app_version</name>
+        <id>maxAppVersion=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif>%ITEM_MAXAPPVERSION%</nullif>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>addon_status</name>
+        <id>status=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>50</length>
+        <precision>-1</precision>
+        <nullif>%ITEM_STATUS%</nullif>
+        <ifnull>Unknown</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_guid_raw</name>
+        <id>appID=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>38</length>
+        <precision>-1</precision>
+        <nullif>%APP_ID%</nullif>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_version_raw</name>
+        <id>appVersion=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif>%APP_VERSION%</nullif>
+        <ifnull>Invalid</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_os</name>
+        <id>appOS=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>10</length>
+        <precision>-1</precision>
+        <nullif>%APP_OS%</nullif>
+        <ifnull>Unknown</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_build_target</name>
+        <id>appABI=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>20</length>
+        <precision>-1</precision>
+        <nullif>%APP_ABI%</nullif>
+        <ifnull>Unknown</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>product_locale_raw</name>
+        <id>locale=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>15</length>
+        <precision>-1</precision>
+        <nullif>%APP_LOCALE%</nullif>
+        <ifnull>Unknown</ifnull>
+        <trimtype>none</trimtype>
+      </field>      <field>        <name>update_type</name>
+        <id>updateType=</id>
+        <idrem>Y</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>3</length>
+        <precision>-1</precision>
+        <nullif>%UPDATE_TYPE%</nullif>
+        <ifnull>0</ifnull>
+        <trimtype>none</trimtype>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>208</xloc>
+      <yloc>506</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Strip product_guid braces</name>
+    <type>RegexEval</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <script><![CDATA[^\{?([^}]{5,36})\}?$]]></script>    <matcher>product_guid_raw</matcher>
+    <resultfieldname>product_guid_result</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
+    <fields>
+      <field>
+        <name>product_guid_raw2</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>36</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull>Unknown</ifnull>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>619</xloc>
+      <yloc>506</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Text file input</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>3</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <accept_filenames>Y</accept_filenames>
+    <passing_through_fields>Y</passing_through_fields>
+    <accept_field>filename</accept_field>
+    <accept_stepname/>
+    <separator>	</separator>
+    <enclosure/>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>N</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>Unix</format>
+    <encoding/>
+    <add_to_result_filenames>N</add_to_result_filenames>
+    <file>
+      <name/>
+      <filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>GZip</compression>
+    </file>
+    <filters>
+      <filter>
+        <filter_string>Base64: NjMuMjQ1LjIwOC4xMzY=</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>N</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: NjMuMjQ1LjIxMy4=</filter_string>        <filter_position>0</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>N</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: NjMuMjQ1LjIxNy4=</filter_string>        <filter_position>0</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>N</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: MjA5LjEwLjIxNy4yMjY=</filter_string>        <filter_position>0</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>N</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: MTgwLjkyLjE4NC4=</filter_string>        <filter_position>0</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>N</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: NTkuMTUxLjUwLg==</filter_string>        <filter_position>0</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>N</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: R0VUIC91cGRhdGUvVmVyc2lvbkNoZWNrLnBocD8=</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>Y</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: R0VUIC9ibG9ja2xpc3Qv</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>Y</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: L2Rvd25sb2Fkcy9maWxlLw==</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>Y</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: L2NvbGxlY3Rpb25zLw==</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>Y</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: L2FkZG9uL3NoYXJlLw==</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>Y</filter_is_positive>      </filter>
+      <filter>
+        <filter_string>Base64: L3NoYXJlP3NlcnZpY2U9</filter_string>        <filter_position>-1</filter_position>        <filter_is_last_line>N</filter_is_last_line>        <filter_is_positive>Y</filter_is_positive>      </filter>
+    </filters>
+    <fields>
+      <field>
+        <name>line</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <ifnull/>
+        <position>-1</position>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <error_ignored>N</error_ignored>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>en_US</date_format_locale>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>500</xloc>
+      <yloc>250</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Unescape addon_guid</name>
+    <type>Janino</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>addon_guid_x</field_name>
+<formula_string>java.net.URLDecoder.decode(addon_guid_raw)</formula_string>
+<value_type>String</value_type>
+<value_length>255</value_length>
+<value_precision>-1</value_precision>
+<replace_field>addon_guid_raw</replace_field>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>331</xloc>
+      <yloc>607</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Unescape addon_version</name>
+    <type>Janino</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <formula><field_name>addon_version_x</field_name>
+<formula_string>java.net.URLDecoder.decode(addon_version_raw)</formula_string>
+<value_type>String</value_type>
+<value_length>255</value_length>
+<value_precision>-1</value_precision>
+<replace_field>addon_version_raw</replace_field>
+</formula>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>473</xloc>
+      <yloc>605</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Validate product fields</name>
+    <type>Validator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<validate_all>N</validate_all>
+<concat_errors>N</concat_errors>
+<concat_separator/>
+       <validator_field><name>product_version_suffix</name>
+<validation_name>product_version_suffix size</validation_name>
+<max_length>20</max_length>
+<min_length>-1</min_length>
+<null_allowed>Y</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description>value too long</error_description>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+       <validator_field><name>product_platform</name>
+<validation_name>product_platform in list</validation_name>
+<max_length>-1</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description>value not in list</error_description>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value><value>None</value>
+<value>win</value>
+<value>linux</value>
+<value>osx</value>
+<value>osxppc</value>
+<value>opensolaris-i386</value>
+<value>opensolaris-sparc</value>
+<value>solaris-i386</value>
+<value>solaris-sparc</value>
+</allowed_value></validator_field>
+       <validator_field><name>product_locale</name>
+<validation_name>product_locale regex</validation_name>
+<max_length>-1</max_length>
+<min_length>-1</min_length>
+<null_allowed>N</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed/>
+<regular_expression>^None|all|[a-z]{2}(?&gt;-[A-Za-z]{2}(?&gt;-[a-z]{2,8})?)?$</regular_expression>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description>invalid format</error_description>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>250</xloc>
+      <yloc>350</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Write to log</name>
+    <type>WriteToLog</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <loglevel>log_level_minimal</loglevel>
+      <displayHeader>Y</displayHeader>
+    <fields>
+      <field>
+        <name>filename</name>
+        </field>
+      <field>
+        <name>url</name>
+        </field>
+      <field>
+        <name>error_field</name>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>787</xloc>
+      <yloc>556</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+      <error>
+        <source_step>Validate product fields</source_step>
+        <target_step>Flag invalid product strings</target_step>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors>-1</max_errors>
+        <max_pct_errors>-1</max_pct_errors>
+        <min_pct_rows>-1</min_pct_rows>
+      </error>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>

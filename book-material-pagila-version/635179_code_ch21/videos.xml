@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+	<video_template>
+		<title/>
+		<genre>
+			<choice>action</choice>
+			<choice>comedy</choice>
+			<choice>drama</choice>
+			<choice>family</choice>
+			<choice>foreign</choice>
+			<choice>horror</choice>
+			<choice>musical</choice>
+			<choice>special</choice>
+		</genre>
+		<rating>
+			<choice>G</choice>
+			<choice>PG</choice>
+			<choice>PG-13</choice>
+			<choice>R</choice>
+			<choice>NC-17</choice>
+		</rating>
+		<user_rating>
+			<choice>1</choice>
+			<choice>2</choice>
+			<choice>3</choice>
+			<choice>4</choice>
+			<choice>5</choice>
+		</user_rating>
+		<summary/>
+		<details/>
+		<year/>
+		<director/>
+		<studio/>
+		<runtime/>
+		<vhs/>
+		<vhs_stock/>
+		<dvd/>
+		<dvd_stock/>
+		<beta/>
+		<beta_stock/>
+		<laserdisk/>
+		<laserdisk_stock/>
+	</video_template>
+	<actors>
+		<actor id="00000015">Anderson, Jeff</actor>
+		<actor id="00000030">Bishop, Kevin</actor>
+		<actor id="0000000f">Bonet, Lisa</actor>
+		<actor id="00000024">Bowz, Eddie</actor>
+		<actor id="0000002d">Curry, Tim</actor>
+		<actor id="00000033">Dullea, Keir</actor>
+		<actor id="00000042">Fisher, Carrie</actor>
+		<actor id="00000006">Ford, Harrison</actor>
+		<actor id="00000045">Foster, Jodie</actor>
+		<actor id="00000018">Ghigliotti, Marilyn</actor>
+		<actor id="0000000c">Hackman, Gene</actor>
+		<actor id="0000003f">Hamill, Mark</actor>
+		<actor id="00000027">Heames, Darin</actor>
+		<actor id="0000001e">Heche, Anne</actor>
+		<actor id="00000003">Jones, Tommy Lee</actor>
+		<actor id="00000039">Lockwood, Gary</actor>
+		<actor id="00000048">McConaughey, Matthew</actor>
+		<actor id="0000003c">Richter, Daniel</actor>
+		<actor id="00000021">Schwimmer, David</actor>
+		<actor id="00000009">Smith, Will</actor>
+		<actor id="0000001b">Spoonhauer, Lisa</actor>
+		<actor id="00000036">Sylvester, William</actor>
+		<actor id="0000002a">Todd, Antonio</actor>
+		<actor id="00000012">Voight, John</actor>
+		<actor id="0000004b">Woods, James</actor>
+		<actor id="1784027567">Lewis, Daniel</actor>
+		<actor id="2096814035">Manesse, Gaspard</actor>
+		<actor id="325442748">Feito, Raphael</actor>
+		<actor id="4231919377">Morier, Philippe</actor>
+		<actor id="2142583927">Racette, Francine</actor>
+		<actor id="916503204">Beatles, The</actor>
+		<actor id="916503205">Neeson, Liam</actor>
+		<actor id="916503206">Pinocchio, Mr.</actor>
+		<actor id="916503207">Parillaud, Anne</actor>
+		<actor id="916503208">Pitt, Brad</actor>
+		<actor id="916503209">Freeman, Morgan</actor>
+		<actor id="916503211">Domingo, Placido</actor>
+		<actor id="916503210">Sharif, Omar</actor>
+	</actors>
+	<videos>
+		<video id="id1235AA0">
+			<title>The Fugitive</title>
+			<genre>action</genre>
+			<rating>PG-13</rating>
+			<summary>Tommy Lee Jones and Harrison Ford are the hunter and the hunted in this fast-paced story of a falsely convicted man who escapes to find his wife's true killer.</summary>
+			<details>Harrison Ford and Tommy Lee Jones race through the breathless manhunt movie based on the classic TV series. Ford is prison escapee Dr. Richard Kimble, a Chicago surgeon falsely convicted of killing his wife and determined to prove his innocence by leading his pursuers to the one-armed man who actually commited the crime.</details>
+			<year>1997</year>
+			<director>Andrew Davis</director>
+			<studio>Warner</studio>
+			<user_rating>4</user_rating>
+			<runtime>110</runtime>
+			<actorRef>00000003</actorRef>
+			<actorRef>00000006</actorRef>
+			<vhs>13.99</vhs>
+			<vhs_stock>206</vhs_stock>
+			<dvd>14.99</dvd>
+			<dvd_stock>125</dvd_stock>
+			<beta>1.03</beta>
+			<beta_stock>12</beta_stock>
+			<LaserDisk>12.00</LaserDisk>
+			<LaserDisk_stock>10</LaserDisk_stock>
+		</video>
+		<video id="id1244100">
+			<title>Enemy of the State</title>
+			<genre>action</genre>
+			<rating>R</rating>
+			<summary>After a chance meeting with an old pal, Robert Deal finds himself in posession of a disk that contains evidence of an assassination plot by the NSA.</summary>
+			<details>It's not paranoia if they're really after you. Will Smith (Men in Black) stars as attorney Robert Clayton Dean, a man at the center of a high-stakes pursuit when he inadvertently comes into possession of secret information implicating corrupt officials within the government.</details>
+			<year>1999</year>
+			<director>Tony Scott</director>
+			<studio>Buena vista</studio>
+			<user_rating>5</user_rating>
+			<runtime>113</runtime>
+			<actorRef>00000009</actorRef>
+			<actorRef>0000000c</actorRef>
+			<actorRef>0000000f</actorRef>
+			<actorRef>00000012</actorRef>
+			<vhs>16.99</vhs>
+			<vhs_stock>188</vhs_stock>
+			<dvd>29.99</dvd>
+			<dvd_stock>353</dvd_stock>
+			<LaserDisk>12.57</LaserDisk>
+			<LaserDisk_stock>203</LaserDisk_stock>
+		</video>
+		<video id="id124E230">
+			<title>Clerks</title>
+			<genre>comedy</genre>
+			<rating>R</rating>
+			<summary>Spend a day at work with two friends and their quirky customers at a video shop and convenience store.</summary>
+			<details>A day-in-the-life of two men that work as cleks in adjacent video and convenience stores. The story follows the two through an agonizing day at work, a surprise hit at the 1994 Cannes film festival.</details>
+			<year>1999</year>
+			<director>Kevin Smith</director>
+			<studio>Buena vista</studio>
+			<user_rating>3</user_rating>
+			<runtime>97</runtime>
+			<actorRef>00000015</actorRef>
+			<actorRef>00000018</actorRef>
+			<actorRef>0000001b</actorRef>
+			<beta>23.97</beta>
+			<beta_stock>419</beta_stock>
+		</video>
+		<video id="id124F050">
+			<title>Six Days Seven Nights</title>
+			<genre>comedy</genre>
+			<rating>PG-13</rating>
+			<summary>A classy magazine editor and her gruff pilot must put aside their mutual dislike for each other to survive on a deserted island.</summary>
+			<details>Robin Monroe, a New York magazine editor, headed to a paradise island for a photo shoot, and the gruff pilot, Quinn Harris, who is flying her there, must put aside their mutual dislike for each other when their small plane crashes on a deserted South Seas island. Now, at the mercy of the ocean and the island's jungles, they must help each other survive.</details>
+			<year>1998</year>
+			<director>Ivan Reitman</director>
+			<studio>Buena vista</studio>
+			<user_rating>2</user_rating>
+			<runtime>123</runtime>
+			<actorRef>00000006</actorRef>
+			<actorRef>0000001e</actorRef>
+			<actorRef>00000021</actorRef>
+			<vhs>16.99</vhs>
+			<vhs_stock>327</vhs_stock>
+			<LaserDisk>12.00</LaserDisk>
+			<LaserDisk_stock>10</LaserDisk_stock>
+			<beta>10.75</beta>
+			<beta_stock>251</beta_stock>
+		</video>
+		<video id="id1250FA0">
+			<title>The Fear</title>
+			<genre>horror</genre>
+			<rating>R</rating>
+			<summary>Grad students find a mannequin and their worst fears come true.</summary>
+			<details>A graduate psychology student organizes a weekend retreat at his childhood mountain home for a group to face its deepest fears. There they find a mannequin he used to have as a playmate, and when they do their worst fears start to come true.</details>
+			<year>1995</year>
+			<director>Vincent Robert</director>
+			<studio>Simitar Video</studio>
+			<user_rating>2</user_rating>
+			<runtime>96</runtime>
+			<actorRef>00000024</actorRef>
+			<actorRef>00000027</actorRef>
+			<actorRef>0000002a</actorRef>
+			<dvd>12.99</dvd>
+			<dvd_stock>309</dvd_stock>
+		</video>
+		<video id="id1250020">
+			<title>MUPPET TREASURE ISLAND</title>
+			<genre>family</genre>
+			<rating>G</rating>
+			<summary>The Muppets appear in a classic tale of treasure and pirates.</summary>
+			<details>Kermit, Gonzo, Rizzo the Rat and Miss Piggy hit the high seas in this adaptation of Robert Louis Stevenson's classic adventure tale in which young Jim Hawkins tries to keep his coveted treasure map from the dastardly Long John Silver.</details>
+			<year>1996</year>
+			<director>Brian Henson</director>
+			<studio>Image Entertainment</studio>
+			<user_rating>4</user_rating>
+			<runtime>99</runtime>
+			<actorRef>0000002d</actorRef>
+			<actorRef>00000030</actorRef>
+			<LaserDisk>33.99</LaserDisk>
+			<LaserDisk_stock>190</LaserDisk_stock>
+		</video>
+		<video id="id125BCC0">
+			<title>2001: A Space Odyssey</title>
+			<genre>drama</genre>
+			<rating>PG</rating>
+			<summary>An epic tale of space travel and evolution.</summary>
+			<details>A mysterious monolith awakens the imagination of man's distant anscestors; A second one awaits his giant leap to the moon; And in orbit around Jupiter a third beckons man to transcend beyond the limits of his body and his machines. Stanley Kubrick's cosmic metaphor of human evolution remains an unfaded visual achievement.</details>
+			<year>1968</year>
+			<director>Stanley Kubrick</director>
+			<studio>Warner Studios</studio>
+			<user_rating>1</user_rating>
+			<runtime>148</runtime>
+			<actorRef>00000033</actorRef>
+			<actorRef>00000036</actorRef>
+			<actorRef>00000039</actorRef>
+			<actorRef>0000003c</actorRef>
+			<vhs>16.99</vhs>
+			<vhs_stock>120</vhs_stock>
+			<dvd>21.49</dvd>
+			<dvd_stock>54</dvd_stock>
+			<beta>32.55</beta>
+			<beta_stock>231</beta_stock>
+		</video>
+		<video id="id1256990">
+			<title>Star Wars</title>
+			<genre>action</genre>
+			<rating>PG</rating>
+			<summary>Luke embarks on an epic journey in a galaxy far far away.</summary>
+			<details>A young man on a desert planet joins a desperate rebellion against the evil galactic Empire after his aunt and uncle are murdered by Imperial stormtroopers.</details>
+			<year>1977</year>
+			<director>George Lucus</director>
+			<studio>Fox Films</studio>
+			<user_rating>5</user_rating>
+			<runtime>121</runtime>
+			<actorRef>0000003f</actorRef>
+			<actorRef>00000042</actorRef>
+			<actorRef>00000006</actorRef>
+			<actorRef/>
+			<vhs>19.99</vhs>
+			<vhs_stock>312</vhs_stock>
+			<LaserDisk>34</LaserDisk>
+			<LaserDisk_stock>95</LaserDisk_stock>
+		</video>
+		<video id="id1263D00">
+			<title>Contact</title>
+			<genre>drama</genre>
+			<rating>PG</rating>
+			<summary>A scientist makes contact with intelligent life and travels billions of miles to meet them.</summary>
+			<details>Devoted astronomer Dr. Ellie Arroway undertakes an emotional and spiritual journey after receiving the message she's waited for all her life--a mysterious signal beamed in from alien beings, who pass along instructions for building and piloting a craft that will presumably survive the passage from Earth to their home. While struggling to fund her mission, Arroway also struggles with her feelings about the nature of things, particularly after meeting a charismatic New Age believer who questions her disbelief in God.</details>
+			<year>1997</year>
+			<director>N/A</director>
+			<studio>Warner Studios</studio>
+			<user_rating>3</user_rating>
+			<runtime>150</runtime>
+			<actorRef>00000045</actorRef>
+			<actorRef>00000048</actorRef>
+			<actorRef>0000004b</actorRef>
+			<vhs>16.99</vhs>
+			<vhs_stock>528</vhs_stock>
+			<beta>27.95</beta>
+			<beta_stock>128</beta_stock>
+		</video>
+		<video id="3325584384">
+			<studio/>
+			<actorRef>325442748</actorRef>
+			<actorRef>2096814035</actorRef>
+			<actorRef>4231919377</actorRef>
+			<director>Louis Malle</director>
+			<title>Au Revoir Les Enfants</title>
+			<dvd>25.25</dvd>
+			<laserdisk>55.25</laserdisk>
+			<laserdisk_stock>1</laserdisk_stock>
+			<genre>foreign</genre>
+			<rating>G</rating>
+			<runtime>124</runtime>
+			<user_rating>5</user_rating>
+			<details>A young boy befriends a new student whom the others feel is different. When he discovers the new student is a Jew, he tells no one and remains a true friend. Tragedy strikes when a school employee tells the Gestapo they are hiding Jews and the student is arrested and taken away.</details>
+			<summary>A young boy befriends a new student whom the others feel is different.</summary>
+			<vhs>12.45</vhs>
+			<beta_stock>5</beta_stock>
+			<year>1987</year>
+			<vhs_stock>5</vhs_stock>
+			<dvd_stock>7</dvd_stock>
+			<beta>12.45</beta>
+		</video>
+		<video id="647599245">
+			<studio/>
+			<actorRef>916503204</actorRef>
+			<director>George Dunning</director>
+			<title>Yellow Submarine</title>
+			<dvd>25</dvd>
+			<laserdisk/>
+			<laserdisk_stock/>
+			<genre>musical</genre>
+			<rating>G</rating>
+			<runtime>100</runtime>
+			<user_rating>4</user_rating>
+			<details>This restored, animated valentine to the Beatles offers viewers the rare chance to see a work that's been substantially improved by its technical facelift, not just supersized with extra footage.</details>
+			<summary>The all time Beatles Classic.</summary>
+			<vhs>15</vhs>
+			<beta_stock/>
+			<year>1968</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta/>
+		</video>
+		<video id="647599246">
+			<studio/>
+			<actorRef>916503205</actorRef>
+			<director>David Breashears</director>
+			<title>Everest</title>
+			<dvd>27</dvd>
+			<laserdisk/>
+			<laserdisk_stock/>
+			<genre>special</genre>
+			<rating>G</rating>
+			<runtime>110</runtime>
+			<user_rating>4</user_rating>
+			<summary>Originally shot in the IMAX format, this video shows spectacular shots of climbers on Mount Everest.</summary>
+			<details>Filmed in the IMAX format, this film had the luck (or lack thereof) to be shot during the same fateful and fatal climb of Mount Everest chronicled in Jon Krakauer's book, Into Thin Air, in which a group of rich hobby climbers found themselves trapped by a blizzard near the summit. The IMAX film contains footage of those people, but focuses on its own group, as they make their assault on the top of the world's highest peak.</details>
+			<vhs>15</vhs>
+			<beta_stock/>
+			<year>1996</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta/>
+		</video>
+		<video id="647599247">
+			<studio/>
+			<actorRef>916503206</actorRef>
+			<director>Disney</director>
+			<title>Pinocchio</title>
+			<dvd>22</dvd>
+			<laserdisk>20</laserdisk>
+			<laserdisk_stock>3</laserdisk_stock>
+			<genre>family</genre>
+			<rating>G</rating>
+			<runtime>90</runtime>
+			<user_rating>5</user_rating>
+			<summary>The classic story of the all-time favorite puppet.</summary>
+			<details>This Disney masterpiece from 1940 will hold up forever precisely because it doesn't restrain or temper the most elemental emotions and themes germane to its story. Based on the Collodi tale about a wooden puppet who wants to become a real boy, Pinocchio is among the most magical, mythical, and frightening films to come from the studio in its long history.</details>
+			<vhs>15</vhs>
+			<beta_stock/>
+			<year>1940</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta/>
+		</video>
+		<video id="647599248">
+			<studio/>
+			<actorRef>916503207</actorRef>
+			<director>Luc Besson</director>
+			<title>La Femme Nikita</title>
+			<dvd>25</dvd>
+			<laserdisk/>
+			<laserdisk_stock/>
+			<genre>foreign</genre>
+			<rating>R</rating>
+			<runtime>125</runtime>
+			<user_rating>4</user_rating>
+			<summary>Anne Parillaud plays a special agent in this fast-moving french thriller.</summary>
+			<details>French director Luc Besson (The Fifth Element) broke the commercial taboo against female-driven action movies with this seminal, seductively slick film about a violent street punk (Anne Parillaud) trained to become a smooth, stylish assassin.</details>
+			<vhs>15</vhs>
+			<beta_stock/>
+			<year>1990</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta/>
+		</video>
+		<video id="647599249">
+			<studio/>
+			<actorRef>916503208</actorRef>
+			<actorRef>916503209</actorRef>
+			<director>David Fincher</director>
+			<title>Seven</title>
+			<dvd>22</dvd>
+			<laserdisk>24</laserdisk>
+			<laserdisk_stock>2</laserdisk_stock>
+			<genre>horror</genre>
+			<rating>R</rating>
+			<runtime>130</runtime>
+			<user_rating>3</user_rating>
+			<summary>A serial killer forces each of his victims to die by acting out one of the seven deadly sins.</summary>
+			<details>The most viscerally frightening and disturbing homicidal maniac picture since The Silence of the Lambs, Seven is based on an idea that's both gruesome and ingenious. A serial killer forces each of his victims to die by acting out one of the seven deadly sins. The murder scene is then artfully arranged into a grotesque tableau, a graphic illustration of each mortal vice.</details>
+			<vhs>15</vhs>
+			<beta_stock/>
+			<year>1995</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta/>
+		</video>
+		<video id="647599250">
+			<studio/>
+			<director/>
+			<actorRef>916503210</actorRef>
+			<title>National Geographic's Mysteries of Egypt</title>
+			<dvd>22</dvd>
+			<laserdisk/>
+			<laserdisk_stock/>
+			<genre>special</genre>
+			<rating>R</rating>
+			<runtime>110</runtime>
+			<user_rating>3</user_rating>
+			<summary>Experience the magnificence of Egypt like never before!</summary>
+			<details>Legendary actor and native Egyptian Omar Sharif and Kate Maberly join National Geographic's award-winning filmmakers to weave a fascinating story of a grandfather who enchants his granddaughter with tales of tombs and treasures. Travel back more than 4,000 years to a time when the Great Pyramids of Giza were built.</details>
+			<vhs>15</vhs>
+			<beta_stock>5</beta_stock>
+			<year>1999</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta>14</beta>
+		</video>
+		<video id="647599251">
+			<studio/>
+			<director>Francesco Rosi</director>
+			<actorRef>916503211</actorRef>
+			<title>Carmen</title>
+			<dvd>18</dvd>
+			<laserdisk/>
+			<laserdisk_stock/>
+			<genre>musical</genre>
+			<rating>PG</rating>
+			<runtime>125</runtime>
+			<user_rating>4</user_rating>
+			<summary>A fine screen adaptation of Bizet's popular opera.</summary>
+			<details>Placido Domingo does it again, this time in Bizet's popular opera.</details>
+			<vhs>15</vhs>
+			<beta_stock/>
+			<year>1984</year>
+			<vhs_stock>88</vhs_stock>
+			<dvd_stock>22</dvd_stock>
+			<beta/>
+		</video>
+	</videos>
+</result>

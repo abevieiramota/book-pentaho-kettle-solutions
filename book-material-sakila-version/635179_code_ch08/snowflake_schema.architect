@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="0.9.16">
+ <project-name>snowflake_schema</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Not Configured" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="7030d593-9f92-4035-badd-a123d5b1eac4" name="fact" objectType="TABLE" physicalName="fact" remarks="" >
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="b50b1cf8-8118-43aa-9b67-8ebb96e0c7aa" autoIncrement="false" autoIncrementSequenceName="dim_date_day_dim_date_day_key_seq" name="day_key" nullable="0" physicalName="day_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL3" populated="true" UUID="00329b6d-98c5-4e43-94e1-3c44ea71f157" autoIncrement="false" autoIncrementSequenceName="dim_product_product_key_seq" name="product_key" nullable="0" physicalName="product_key" precision="10" primaryKeySeq="1" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL4" populated="true" UUID="edce5e14-b7d6-4144-bd15-68c2f3161a12" autoIncrement="false" autoIncrementSequenceName="fact_amount_seq" name="amount" nullable="0" physicalName="amount" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX5" populated="true" UUID="c4512a4c-d8aa-4c92-9f06-fe447a68c1c9" clustered="false" name="fact_pk" physicalName="fact_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC6" populated="true" UUID="391269bc-4f45-4f3b-921f-ceae52c6db5c" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="day_key" physicalName="day_key" />
+     <index-column id="IDC7" populated="true" UUID="5cb6e052-d16a-472b-98c5-49a200508ddb" ascendingOrDescending="UNSPECIFIED" column-ref="COL3" name="product_key" physicalName="product_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB8" populated="true" UUID="5560684b-95e5-4186-a5c9-f7a2e96cb563" name="dim_date_day" objectType="TABLE" physicalName="dim_date_day" remarks="" >
+   <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL9" populated="true" UUID="5b11d502-db96-4be1-b452-adcb66e28af1" autoIncrement="false" autoIncrementSequenceName="dim_date_day_dim_date_day_key_seq" name="day_key" nullable="0" physicalName="day_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL10" populated="true" UUID="5d4bf9c0-ac08-4791-a35f-c06817b450f5" autoIncrement="false" autoIncrementSequenceName="month_month_key_seq" name="month_key" nullable="0" physicalName="month_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL11" populated="true" UUID="1721cfc2-2bf7-4d94-9ca5-977d05690dd0" autoIncrement="false" autoIncrementSequenceName="dim_date_day_dim_date_day_in_month_seq" name="day_in_month" nullable="0" physicalName="day_in_month" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL12" populated="true" UUID="3d4b4721-587f-4ccc-aa8b-aa3e32f0e26c" autoIncrement="false" autoIncrementSequenceName="week_week_key_seq" name="week_key" nullable="0" physicalName="week_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL13" populated="true" UUID="914c5bf7-58b8-4587-aaeb-cef596349612" autoIncrement="false" autoIncrementSequenceName="dim_date_day_dim_date_day_in_week_seq" name="day_in_week" nullable="0" physicalName="day_in_week" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB82" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB84" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX14" populated="true" UUID="2920c9d1-51d3-4cdc-ac7c-a61f99e38c77" clustered="false" name="dim_date_day_pk" physicalName="dim_date_day_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC15" populated="true" UUID="dc7b1f3b-e2dc-494b-9fc2-fddd179d0d1d" ascendingOrDescending="UNSPECIFIED" column-ref="COL9" name="day_key" physicalName="day_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB16" populated="true" UUID="8a3538e4-d4ef-469d-9ebe-df68de626b44" name="dim_date_month" objectType="TABLE" physicalName="dim_date_month" remarks="" >
+   <folder id="FOLTAB161" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL17" populated="true" UUID="e214ddfd-de50-47fc-bd28-5ee818acb2e8" autoIncrement="false" autoIncrementSequenceName="dim_date_month_dim_date_month_key_seq" name="month_key" nullable="0" physicalName="month_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL18" populated="true" UUID="786617bf-624d-47a3-aef5-10bea40a692f" autoIncrement="false" autoIncrementSequenceName="quarter_quarter_key_seq" name="quarter_key" nullable="0" physicalName="quarter_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL19" populated="true" UUID="77ebc5e1-e77b-40f6-9d7e-248689cae868" autoIncrement="false" autoIncrementSequenceName="dim_date_month_dim_date_month_number_seq" name="month_number" nullable="0" physicalName="month_number" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB163" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB162" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB164" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX20" populated="true" UUID="780433bb-718a-4090-9afc-9ceb3e464c5c" clustered="false" name="dim_date_month_pk" physicalName="dim_date_month_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC21" populated="true" UUID="5549bad6-3bcb-49e7-8f16-0d07caca19b9" ascendingOrDescending="UNSPECIFIED" column-ref="COL17" name="month_key" physicalName="month_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB22" populated="true" UUID="b4a76509-3b5d-4ddd-a260-9333cde15358" name="dim_date_quarter" objectType="TABLE" physicalName="dim_date_quarter" remarks="" >
+   <folder id="FOLTAB221" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL23" populated="true" UUID="31a87a91-7c4f-40cf-b0ed-1f08b0d40ff7" autoIncrement="false" autoIncrementSequenceName="dim_date_quarter_dim_date_quarter_key_seq" name="quarter_key" nullable="0" physicalName="quarter_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL24" populated="true" UUID="18af12cb-bed0-49f4-9fde-5f38afb11a16" autoIncrement="false" autoIncrementSequenceName="year_year_key_seq" name="year_key" nullable="0" physicalName="year_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL25" populated="true" UUID="7fe93d58-436b-4e22-aaae-6e16f2ddb910" autoIncrement="false" autoIncrementSequenceName="dim_date_quarter_dim_date_quarter_number_seq" name="quarter_number" nullable="0" physicalName="quarter_number" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB223" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB222" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB224" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX26" populated="true" UUID="56247bb6-35b9-4190-b500-8b0eaa0846ec" clustered="false" name="dim_date_quarter_pk" physicalName="dim_date_quarter_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC27" populated="true" UUID="07077466-7e3e-4cde-b193-e2d8224fac54" ascendingOrDescending="UNSPECIFIED" column-ref="COL23" name="quarter_key" physicalName="quarter_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB28" populated="true" UUID="0fd9e7b7-f3f8-46aa-b900-b1bcebb35c14" name="dim_date_year" objectType="TABLE" physicalName="dim_date_year" remarks="" >
+   <folder id="FOLTAB281" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL29" populated="true" UUID="9e612fcb-0ab1-48b0-9e2c-d0dae56f9e51" autoIncrement="false" autoIncrementSequenceName="dim_date_year_dim_date_year_key_seq" name="year_key" nullable="0" physicalName="year_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL30" populated="true" UUID="d4351138-24a4-4dbd-942f-df9695707e2e" autoIncrement="false" autoIncrementSequenceName="dim_date_year_dim_date_year_number_seq" name="year_number" nullable="0" physicalName="year_number" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB283" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB282" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB284" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX31" populated="true" UUID="5c359fbf-bdf2-4811-93d5-93542c26dbd8" clustered="false" name="dim_date_year_pk" physicalName="dim_date_year_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC32" populated="true" UUID="9d972bf7-8355-431d-bb8f-e22c66e47a4b" ascendingOrDescending="UNSPECIFIED" column-ref="COL29" name="year_key" physicalName="year_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB33" populated="true" UUID="5239f6c6-3abc-4adf-b728-46f5e9364567" name="dim_date_week" objectType="TABLE" physicalName="dim_date_week" remarks="" >
+   <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL34" populated="true" UUID="917fe508-b80c-489c-9358-27f68caf2c83" autoIncrement="false" autoIncrementSequenceName="dim_date_week_dim_date_week_key_seq" name="week_key" nullable="0" physicalName="week_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL35" populated="true" UUID="dafadeef-f773-4314-ae7e-2d6b02f97c59" autoIncrement="false" autoIncrementSequenceName="year_year_key_seq" name="year_key" nullable="0" physicalName="year_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL36" populated="true" UUID="59ef2816-4d03-498b-a09e-ea16f130919c" autoIncrement="false" autoIncrementSequenceName="dim_date_week_dim_date_week_number_seq" name="week_number" nullable="0" physicalName="week_number" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB333" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB332" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB334" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX37" populated="true" UUID="ef4f5232-475b-4516-a970-c5cf12ecfeb8" clustered="false" name="dim_date_week_pk" physicalName="dim_date_week_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC38" populated="true" UUID="2624a8ed-a1cb-48be-8944-66b9ec8fe4e3" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="week_key" physicalName="week_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB39" populated="true" UUID="78de4907-7e3a-47a8-bed4-5c9b65dfa91a" name="dim_product_brand" objectType="TABLE" physicalName="dim_product_brand" remarks="" >
+   <folder id="FOLTAB391" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL40" populated="true" UUID="b3acf652-058f-4314-abb2-43c8a0627a32" autoIncrement="false" autoIncrementSequenceName="dim_product_brand_brand_key_seq" name="brand_key" nullable="0" physicalName="brand_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL41" populated="true" UUID="edcb83ed-7ecc-4d70-a3c3-800978fffc3a" autoIncrement="false" autoIncrementSequenceName="dim_product_brand_brand_name_seq" name="brand_name" nullable="0" physicalName="brand_name" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    </folder>
+    <folder id="FOLTAB393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB392" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB394" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX42" populated="true" UUID="ea19c000-9048-4d00-a7df-2259562f5848" clustered="false" name="dim_product_brand_pk" physicalName="dim_product_brand_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC43" populated="true" UUID="0383f2d2-b105-42e2-8ecd-4e564c7e3fc3" ascendingOrDescending="UNSPECIFIED" column-ref="COL40" name="brand_key" physicalName="brand_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB44" populated="true" UUID="bb9b8b04-9edd-4275-affb-d770a38991ae" name="dim_product" objectType="TABLE" physicalName="dim_product" remarks="" >
+   <folder id="FOLTAB441" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL45" populated="true" UUID="f74b1094-ae4a-4ebb-8478-6a90876fbcc6" autoIncrement="false" autoIncrementSequenceName="dim_product_product_key_seq" name="product_key" nullable="0" physicalName="product_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL46" populated="true" UUID="2b8250b7-b971-417e-aebb-7fbb3d94140e" autoIncrement="false" autoIncrementSequenceName="dim_product_product_name_seq" name="product_name" nullable="0" physicalName="product_name" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    <column id="COL47" populated="true" UUID="3bce4dbf-be06-4f10-ad97-7b1f88df5c9a" autoIncrement="false" autoIncrementSequenceName="dim_product_brand_brand_key_seq" name="brand_key" nullable="0" physicalName="brand_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL48" populated="true" UUID="fd1a64b8-a60e-474a-bbd4-c2a6a12a2450" autoIncrement="false" autoIncrementSequenceName="dim_product_category_category_key_seq" name="category_key" nullable="0" physicalName="category_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB443" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB442" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB444" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX49" populated="true" UUID="5375c31a-304b-4d63-8f05-568b48f18317" clustered="false" name="dim_product_pk" physicalName="dim_product_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC50" populated="true" UUID="bb1b46c7-704e-43a0-90db-73bf6d485acc" ascendingOrDescending="UNSPECIFIED" column-ref="COL45" name="product_key" physicalName="product_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB51" populated="true" UUID="e53a5d58-71a9-4240-b36a-84d0f1c81f07" name="dim_product_category" objectType="TABLE" physicalName="dim_product_category" remarks="" >
+   <folder id="FOLTAB511" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL52" populated="true" UUID="e1f7eb01-ad7e-4a18-a872-ca763ca1d1ac" autoIncrement="false" autoIncrementSequenceName="dim_product_category_category_key_seq" name="category_key" nullable="0" physicalName="category_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL53" populated="true" UUID="efd26be5-cb6d-4750-a913-a35c4ccf0ab9" autoIncrement="false" autoIncrementSequenceName="dim_product_category_category_name_seq" name="category_name" nullable="0" physicalName="category_name" precision="10" referenceCount="1" remarks="" scale="0" type="12" />
+    </folder>
+    <folder id="FOLTAB513" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB512" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB514" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX54" populated="true" UUID="b7761047-c6f0-4a72-83f9-d395915e17b9" clustered="false" name="dim_product_category_pk" physicalName="dim_product_category_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC55" populated="true" UUID="13308963-15ea-44b0-bcb8-b7376a91f79f" ascendingOrDescending="UNSPECIFIED" column-ref="COL52" name="category_key" physicalName="category_key" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL56" populated="true" UUID="f6292b86-8899-4e10-8b52-68a9c8d32419" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="dim_date_day_fact_fk" physicalName="dim_date_day_fact_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP57" populated="true" UUID="1feb9c59-c674-4256-92b4-16d46d2ccd2f" fk-column-ref="COL2" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   </relationship>
+   <relationship id="REL58" populated="true" UUID="d6fd9f5d-e8bd-493d-a6a8-973cc654a111" deferrability="7" deleteRule="3" fk-table-ref="TAB8" fkCardinality="7" identifying="false" name="month_day_fk" physicalName="month_day_fk" pk-table-ref="TAB16" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP59" populated="true" UUID="1892edfb-5f47-4096-9a88-ba1d3a53dc2e" fk-column-ref="COL10" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL17" />
+   </relationship>
+   <relationship id="REL60" populated="true" UUID="0e8ce84f-6448-4db4-abb9-47042f5ce9e1" deferrability="7" deleteRule="3" fk-table-ref="TAB16" fkCardinality="7" identifying="false" name="quarter_month_fk" physicalName="quarter_month_fk" pk-table-ref="TAB22" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP61" populated="true" UUID="d3a67412-71d5-40c7-ba3d-05ac2500c1a6" fk-column-ref="COL18" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL23" />
+   </relationship>
+   <relationship id="REL62" populated="true" UUID="d634442f-c4b0-478a-8731-5a4cd80d626c" deferrability="7" deleteRule="3" fk-table-ref="TAB22" fkCardinality="7" identifying="false" name="year_quarter_fk" physicalName="year_quarter_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP63" populated="true" UUID="edc75d13-f1c2-40c0-95ed-58170f758608" fk-column-ref="COL24" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL29" />
+   </relationship>
+   <relationship id="REL64" populated="true" UUID="fdd0f764-1eab-4fb5-aee8-13197885ef7e" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="false" name="year_week_fk" physicalName="year_week_fk" pk-table-ref="TAB28" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP65" populated="true" UUID="a84898af-d937-4b78-9100-f6e164d2adfd" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL29" />
+   </relationship>
+   <relationship id="REL66" populated="true" UUID="b97798ce-6aa2-4fc0-8347-9a936a2f6a91" deferrability="7" deleteRule="3" fk-table-ref="TAB8" fkCardinality="7" identifying="false" name="week_day_fk" physicalName="week_day_fk" pk-table-ref="TAB33" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP67" populated="true" UUID="fdd4e620-0672-4528-b1f2-63c03c6122a6" fk-column-ref="COL12" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL34" />
+   </relationship>
+   <relationship id="REL68" populated="true" UUID="c7df8f88-5d64-4b13-8d39-f1cb16dd3cdb" deferrability="7" deleteRule="3" fk-table-ref="TAB44" fkCardinality="7" identifying="false" name="dim_product_brand_dim_product_fk" physicalName="dim_product_brand_dim_product_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP69" populated="true" UUID="f69c8763-9bef-448d-a084-d351ebf54892" fk-column-ref="COL47" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   </relationship>
+   <relationship id="REL70" populated="true" UUID="7a119ce7-51ff-4156-8307-0de3d3f70690" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="true" name="dim_product_fact_fk" physicalName="dim_product_fact_fk" pk-table-ref="TAB44" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP71" populated="true" UUID="27cd0267-a80a-4a3a-87ef-d98200e20715" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL45" />
+   </relationship>
+   <relationship id="REL72" populated="true" UUID="199f6e9f-1e31-4f76-b1d2-791ba957ae17" deferrability="7" deleteRule="3" fk-table-ref="TAB44" fkCardinality="7" identifying="false" name="dim_product_category_dim_product_fk" physicalName="dim_product_category_dim_product_fk" pk-table-ref="TAB51" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP73" populated="true" UUID="25772547-1616-47e1-9461-f60b7770dac3" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL52" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="466" y="550" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="707" y="420" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB16" x="812" y="291" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB22" x="811" y="168" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB28" x="701" y="64" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB33" x="601" y="290" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB39" x="161" y="291" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB44" x="269" y="413" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB51" x="365" y="290" bgColor="0xdfedce" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL62" pk-x="112" pk-y="57" fk-x="28" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL60" pk-x="30" pk-y="71" fk-x="29" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL58" pk-x="24" pk-y="71" fk-x="129" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL64" pk-x="25" pk-y="63" fk-x="124" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL66" pk-x="116" pk-y="71" fk-x="10" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL56" pk-x="0" pk-y="75" fk-x="152" fk-y="24" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL72" pk-x="83" pk-y="63" fk-x="109" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL68" pk-x="104" pk-y="63" fk-x="66" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL70" pk-x="152" pk-y="70" fk-x="0" fk-y="25" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+ </play-pen>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

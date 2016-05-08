@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="video_template" minOccurs="0"/>
+        <xs:element ref="actors"/>
+        <xs:element ref="videos"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="video_template">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title"/>
+        <xs:element name="genre"/>
+        <xs:element name="rating"/>
+        <xs:element name="user_rating"/>
+        <xs:element name="summary"/>
+        <xs:element name="details"/>
+        <xs:element name="year"/>
+        <xs:element name="director"/>
+        <xs:element name="studio"/>
+        <xs:element name="runtime"/>
+        <xs:element name="vhs"/>
+        <xs:element name="vhs_stock"/>
+        <xs:element name="dvd"/>
+        <xs:element name="dvd_stock"/>
+        <xs:element name="beta"/>
+        <xs:element name="beta_stock"/>
+        <xs:element name="laserdisk"/>
+        <xs:element name="laserdisk_stock"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="actor"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actor">
+    <xs:complexType mixed="true">
+      <xs:attribute name="id" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="videos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="video"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="video">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="beta"/>
+        <xs:element ref="beta_stock"/>
+        <xs:element ref="details"/>
+        <xs:element ref="director"/>
+        <xs:element ref="dvd"/>
+        <xs:element ref="dvd_stock"/>
+        <xs:element ref="genre"/>
+        <xs:element ref="laserdisk"/>
+        <xs:element ref="laserdisk_stock"/>
+        <xs:element ref="rating"/>
+        <xs:element ref="runtime"/>
+        <xs:element ref="studio"/>
+        <xs:element ref="summary"/>
+        <xs:element ref="title"/>
+        <xs:element ref="user_rating"/>
+        <xs:element ref="vhs"/>
+        <xs:element ref="vhs_stock"/>
+        <xs:element ref="year"/>
+        <xs:element ref="LaserDisk"/>
+        <xs:element ref="LaserDisk_stock"/>
+        <xs:element ref="actorRef"/>
+      </xs:choice>
+      <xs:attribute name="id" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LaserDisk" type="xs:decimal"/>
+  <xs:element name="LaserDisk_stock" type="xs:integer"/>
+  <xs:element name="actorRef" type="xs:string"/>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="genre">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="choice"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rating">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="choice"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="user_rating">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="choice"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="summary" type="xs:string"/>
+  <xs:element name="details" type="xs:string"/>
+  <xs:element name="year" type="xs:gYear"/>
+  <xs:element name="director" type="xs:string"/>
+  <xs:element name="studio" type="xs:string"/>
+  <xs:element name="runtime" type="xs:string"/>
+  <xs:element name="vhs" type="xs:string"/>
+  <xs:element name="vhs_stock" type="xs:string"/>
+  <xs:element name="dvd" type="xs:string"/>
+  <xs:element name="dvd_stock" type="xs:string"/>
+  <xs:element name="beta" type="xs:string"/>
+  <xs:element name="beta_stock" type="xs:string"/>
+  <xs:element name="laserdisk" type="xs:string"/>
+  <xs:element name="laserdisk_stock" type="xs:string"/>
+  <xs:element name="choice" type="xs:NMTOKEN"/>
+</xs:schema>

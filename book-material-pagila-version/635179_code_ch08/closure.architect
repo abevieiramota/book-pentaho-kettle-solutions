@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="0.9.16">
+ <project-name>closure</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Not Configured" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="b793384a-b970-40ac-b159-572d77e516bd" name="dim_employee" objectType="TABLE" physicalName="dim_employee" remarks="" >
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="e4b08fc3-f9f0-4108-87b2-3009b953ff77" autoIncrement="false" autoIncrementSequenceName="dim_employee_employee_key_seq" name="employee_key" nullable="0" physicalName="employee_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL3" populated="true" UUID="2c86cb22-37c0-40c7-982a-0988263c49cb" autoIncrement="false" autoIncrementSequenceName="dim_employee_employee_key_seq" name="boss_employee_key" nullable="0" physicalName="employee_key" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX4" populated="true" UUID="5b63907b-5468-4047-a9c7-61416cbee328" clustered="false" name="dim_employee_pk" physicalName="dim_employee_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC5" populated="true" UUID="5b163b91-b821-4ac1-8de0-52b8824cb867" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="employee_key" physicalName="employee_key" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB6" populated="true" UUID="c740a64b-2568-4c56-ae0a-c438f33bab59" name="dim_employee_closure" objectType="TABLE" physicalName="dim_employee_closure" remarks="" >
+   <folder id="FOLTAB61" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL7" populated="true" UUID="42d926ac-8e82-4569-9c2c-79c1b2ba5871" autoIncrement="false" autoIncrementSequenceName="boss_employee_key_seq" name="boss_employee_key" nullable="0" physicalName="employee_key" precision="10" primaryKeySeq="0" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL8" populated="true" UUID="22ce0cf4-ed4d-4d9f-a3e1-2bed73efafef" autoIncrement="false" autoIncrementSequenceName="dim_employee_employee_key_seq" name="employee_key" nullable="0" physicalName="employee_key" precision="10" primaryKeySeq="1" referenceCount="1" remarks="" scale="0" type="4" />
+    <column id="COL9" populated="true" UUID="55306e6d-ce4c-4471-95d3-af14e08a356f" autoIncrement="false" autoIncrementSequenceName="dim_employee_closure_distance_seq" name="distance" nullable="0" physicalName="distance" precision="10" referenceCount="1" remarks="" scale="0" type="4" />
+    </folder>
+    <folder id="FOLTAB63" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB64" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX10" populated="true" UUID="c5295863-8fdd-4bb5-9d14-97dbe7e42658" clustered="false" name="dim_employee_closure_pk" physicalName="dim_employee_closure_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC11" populated="true" UUID="90e85fa9-0179-4351-b1fd-73baa95809a2" ascendingOrDescending="UNSPECIFIED" column-ref="COL7" name="boss_employee_key" physicalName="boss_employee_key" />
+     <index-column id="IDC12" populated="true" UUID="e29e545c-04f0-490e-a239-7aebf66daf83" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="employee_key" physicalName="employee_key" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL13" populated="true" UUID="47be4ec2-f13d-4e37-9038-d1c7f2ef376e" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="dim_employee_dim_employee_fk" physicalName="dim_employee_dim_employee_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP14" populated="true" UUID="f21389e5-5d7c-43e5-b849-5334bb25cade" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL15" populated="true" UUID="73eb0cca-f6de-4be6-88be-09e2884454c0" deferrability="7" deleteRule="3" fk-table-ref="TAB6" fkCardinality="7" identifying="true" name="dim_employee_New_Table_fk" physicalName="dim_employee_New_Table_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP16" populated="true" UUID="5f8c5078-1448-404a-8d79-b8c08f914580" fk-column-ref="COL8" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL17" populated="true" UUID="2a834010-a5b4-427e-9820-2b63659d457f" deferrability="7" deleteRule="3" fk-table-ref="TAB6" fkCardinality="7" identifying="true" name="dim_employee_New_Table_fk" physicalName="dim_employee_New_Table_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP18" populated="true" UUID="781a4673-715a-425e-a5ba-525be107b8d8" fk-column-ref="COL7" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="260" y="55" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB6" x="261" y="193" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL13" pk-x="16" pk-y="57" fk-x="0" fk-y="8" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL15" pk-x="150" pk-y="57" fk-x="149" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL17" pk-x="59" pk-y="57" fk-x="58" fk-y="0" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+ </play-pen>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

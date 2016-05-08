@@ -1,0 +1,27 @@
+This is the sample code accompanying the book
+
+"Pentaho Kettle Solutions: Building Open Source ETL Solutions with Pentaho Data Integration"
+
+(Wiley, ISBN: 978-0-470-63517-9)
+
+Here, you'll find the Kettle jobs and transformations, data architect models, 
+java source code, sql scripts and flat files. 
+We've created a separate folder for each chapter, and you'll
+find all samples for a particular chapter in the corresponding folder.
+
+The code for the MySQL Sakila sample database is included in the folder for chapter 4.
+Copyright for the sakila sample database is owned by Oracle coorporation. 
+Information about the Sakila sample database can be found at 
+http://dev.mysql.com/doc/sakila/en/sakila.html
+
+Note that Chapters 1, 2, 3, 5, 12, 13, 15, 16, 17 and 18 do not include download samples. 
+
+Copyright for the videos.xml and videos.xsd files is owned by Progress Software Corporation.
+You can find the online versions at http://www.stylusstudio.com/examples/videos.xml and
+http://www.stylusstudio.com/examples/videos.xsd respectively.
+
+The Authors
+
+Matt Casters - http://www.ibridge.be/
+Roland Bouman - http://rpbouman.blogspot.com/
+Jos van Dongen - http://www.tholis.com
