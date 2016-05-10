@@ -193,22 +193,17 @@ CREATE TABLE `dim_store` (
 -- Table structure for table `dim_time`
 --
 
-DROP TABLE IF EXISTS `dim_time`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_time` (
-  `time_key` int(8) NOT NULL,
-  `time_value` time NOT NULL,
-  `hours24` tinyint(3) NOT NULL,
-  `hours12` tinyint(3) DEFAULT NULL,
-  `minutes` tinyint(3) DEFAULT NULL,
-  `seconds` tinyint(3) DEFAULT NULL,
-  `am_pm` char(3) DEFAULT NULL,
-  PRIMARY KEY (`time_key`),
-  UNIQUE KEY `time_value` (`time_value`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
+CREATE TABLE dw.dim_time
+(
+  hours24 smallint
+, hours12 smallint
+, am_pm character varying (3)
+, time_key integer
+, minutes smallint
+, seconds smallint
+, time_value time
+)
+;
 --
 -- Table structure for table `fact_rental`
 --

@@ -76,8 +76,8 @@
   <notepads>
     <notepad>
       <note>Generate</note>
-      <xloc>11</xloc>
-      <yloc>20</yloc>
+      <xloc>48</xloc>
+      <yloc>32</yloc>
       <width>55</width>
       <heigth>28</heigth>
       <fontname>Microsoft Sans Serif</fontname>
@@ -97,8 +97,8 @@
     </notepad>
     <notepad>
       <note>Transformation</note>
-      <xloc>10</xloc>
-      <yloc>110</yloc>
+      <xloc>48</xloc>
+      <yloc>128</yloc>
       <width>104</width>
       <heigth>28</heigth>
       <fontname/>
@@ -118,8 +118,8 @@
     </notepad>
     <notepad>
       <note>Load</note>
-      <xloc>12</xloc>
-      <yloc>200</yloc>
+      <xloc>48</xloc>
+      <yloc>224</yloc>
       <width>35</width>
       <heigth>28</heigth>
       <fontname>Microsoft Sans Serif</fontname>
@@ -136,6 +136,27 @@
       <bordercolorgreen>100</bordercolorgreen>
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>N</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Na verdade, na verdade, gera 3660 dias -&#x3e; imagino que os 3660 dias gerados aqui mapeiem em 10 anos certinho...&#xd;&#xa;e isso, na verdade, na verdade, &#xe9; estranho&#x21;&#xd;&#xa;pode estar gerando o &#xfa;ltimo ano incompleto&#x21; -&#x3e; est&#xe1;, vai at&#xe9; 2009 completo, come&#xe7;a 7 dias de 2010</note>
+      <xloc>224</xloc>
+      <yloc>32</yloc>
+      <width>609</width>
+      <heigth>58</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
   <connection>
@@ -165,15 +186,15 @@
   <order>
   <hop> <from>Day Sequence</from><to>Calculate Dimension Attributes</to><enabled>Y</enabled> </hop>
   <hop> <from>Generate 10 years</from><to>Day Sequence</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculate Dimension Attributes</from><to>Load dim_date</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculate Dimension Attributes</from><to>Load dim_date</to><enabled>N</enabled> </hop>
   </order>
   <step>
     <name>Calculate Dimension Attributes</name>
     <type>ScriptValueMod</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
-    <copies>4</copies>
+    <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
@@ -182,7 +203,7 @@
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Create a Locale according to the specified language code&#xa;var locale &#x3d; new java.util.Locale&#x28;&#xa;    language_code.getString&#x28;&#x29;&#xa;,   country_code.getString&#x28;&#x29;&#xa;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;Create a calendar, use the specified initial date&#xa;var calendar &#x3d; new java.util.GregorianCalendar&#x28;locale&#x29;&#x3b;&#xa;calendar.setTime&#x28;initial_date.getDate&#x28;&#x29;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;set the calendar to the current date by adding DaySequence days&#xa;calendar.add&#x28;calendar.DAY_OF_MONTH,DaySequence.getInteger&#x28;&#x29; - 1&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;get the calendar date&#xa;var date &#x3d; new java.util.Date&#x28;calendar.getTimeInMillis&#x28;&#x29;&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; 9&#x2f;3&#x2f;07&#xa;var date_short  &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.SHORT&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; Sep 3, 2007 &#xa;var date_medium &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.MEDIUM&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; September 3, 2007&#xa;var date_long   &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.LONG&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; Monday, September 3, 2007&#xa;var date_full   &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.FULL&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;day in year&#x3a; 1..366&#xa;var simpleDateFormat   &#x3d; java.text.SimpleDateFormat&#x28;&#x22;D&#x22;,locale&#x29;&#x3b;&#xa;var day_in_year        &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;day in month&#x3a; 1..31&#xa;simpleDateFormat.applyPattern&#x28;&#x22;d&#x22;&#x29;&#x3b;&#xa;var day_in_month       &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Monday&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;EEEE&#x22;&#x29;&#x3b;&#xa;var day_name           &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Mon&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;E&#x22;&#x29;&#x3b;&#xa;var day_abbreviation   &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;week in year, 1..53&#xa;simpleDateFormat.applyPattern&#x28;&#x22;ww&#x22;&#x29;&#x3b;&#xa;var week_in_year       &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;week in month, 1..5&#xa;simpleDateFormat.applyPattern&#x28;&#x22;W&#x22;&#x29;&#x3b;&#xa;var week_in_month      &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;month number in year, 1..12&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MM&#x22;&#x29;&#x3b;&#xa;var month_number       &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;September&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MMMM&#x22;&#x29;&#x3b;&#xa;var month_name         &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Sep&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MMM&#x22;&#x29;&#x3b;&#xa;var month_abbreviation &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;2 digit representation of the year, example&#x3a; &#x22;07&#x22; for 2007&#xa;simpleDateFormat.applyPattern&#x28;&#x22;yy&#x22;&#x29;&#x3b;&#xa;var year2              &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;4 digit representation of the year, example&#x3a;  2007&#xa;simpleDateFormat.applyPattern&#x28;&#x22;yyyy&#x22;&#x29;&#x3b;&#xa;var year4              &#x3d; &#x22;&#x22; &#x2b; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;handling Quarters is a DIY&#xa;var quarter_name &#x3d; &#x22;Q&#x22;&#x3b;&#xa;var quarter_number&#x3b;&#xa;switch&#x28;parseInt&#x28;month_number&#x29;&#x29;&#x7b;&#xa;    case 1&#x3a; case 2&#x3a; case 3&#x3a; quarter_number &#x3d; &#x22;1&#x22;&#x3b; break&#x3b;&#xa;    case 4&#x3a; case 5&#x3a; case 6&#x3a; quarter_number &#x3d; &#x22;2&#x22;&#x3b; break&#x3b;&#xa;    case 7&#x3a; case 8&#x3a; case 9&#x3a; quarter_number &#x3d; &#x22;3&#x22;&#x3b; break&#x3b;&#xa;    case 10&#x3a; case 11&#x3a; case 12&#x3a; quarter_number &#x3d; &#x22;4&#x22;&#x3b; break&#x3b;&#xa;&#x7d;&#xa;quarter_name &#x2b;&#x3d; quarter_number&#x3b;&#xa;&#xa;&#x2f;&#x2f;get the local yes&#x2f;no values&#xa;var yes &#x3d; local_yes.getString&#x28;&#x29;&#x3b;&#xa;var no &#x3d; local_no.getString&#x28;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;initialize for week calculations&#xa;var first_day_of_week &#x3d; calendar.getFirstDayOfWeek&#x28;&#x29;&#x3b;&#xa;var day_of_week &#x3d; java.util.Calendar.DAY_OF_WEEK&#x3b;&#xa;&#xa;&#x2f;&#x2f;find out if this is the first day of the week&#xa;var is_first_day_in_week&#x3b;&#xa;if&#x28;first_day_of_week&#x3d;&#x3d;calendar.get&#x28;day_of_week&#x29;&#x29;&#x7b;&#xa;    is_first_day_in_week &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_first_day_in_week &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;calculate the next day&#xa;calendar.add&#x28;calendar.DAY_OF_MONTH,1&#x29;&#x3b;&#xa;&#x2f;&#x2f;get the next calendar date&#xa;var next_day &#x3d; new java.util.Date&#x28;calendar.getTimeInMillis&#x28;&#x29;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;find out if this is the first day of the week&#xa;var is_last_day_in_week&#x3b;&#xa;if&#x28;first_day_of_week&#x3d;&#x3d;calendar.get&#x28;day_of_week&#x29;&#x29;&#x7b;&#xa;    is_last_day_in_week &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_last_day_in_week &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;find out if this is the first day of the month&#xa;var is_first_day_of_month&#x3b;&#xa;if&#x28;day_in_month &#x3d;&#x3d; 1&#x29;&#x7b;&#xa;    is_first_day_in_month &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_first_day_in_month &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;find out if this is the last day in the month&#xa;var is_last_day_of_month&#x3b;&#xa;if&#x28;java.text.SimpleDateFormat&#x28;&#x22;d&#x22;,locale&#x29;.format&#x28;next_day&#x29;&#x3d;&#x3d;1&#x29;&#x7b;&#xa;    is_last_day_in_month &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_last_day_in_month &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;date &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; month_number &#x2b; &#x22;-&#x22; &#x2b; day_in_month&#xa;var year_quarter            &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; quarter_name&#x3b;&#xa;var year_month_number       &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; month_number&#x3b;&#xa;var year_month_abbreviation &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; month_abbreviation&#x3b;&#xa;&#xa;var date_key &#x3d; year4 &#x2b; month_number &#x2b; &#x28;day_in_month&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29; &#x2b; day_in_month&#x3b;</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Create a Locale according to the specified language code&#xa;var locale &#x3d; new java.util.Locale&#x28;language_code.getString&#x28;&#x29;,country_code.getString&#x28;&#x29;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;Create a calendar, use the specified initial date&#xa;var calendar &#x3d; new java.util.GregorianCalendar&#x28;locale&#x29;&#x3b;&#xa;calendar.setTime&#x28;initial_date.getDate&#x28;&#x29;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;set the calendar to the current date by adding DaySequence days&#xa;calendar.add&#x28;calendar.DAY_OF_MONTH, DaySequence.getInteger&#x28;&#x29; - 1&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;get the calendar date&#xa;var date &#x3d; new java.util.Date&#x28;calendar.getTimeInMillis&#x28;&#x29;&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; 9&#x2f;3&#x2f;07&#xa;var date_short  &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.SHORT&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; Sep 3, 2007 &#xa;var date_medium &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.MEDIUM&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; September 3, 2007&#xa;var date_long   &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.LONG&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; Monday, September 3, 2007&#xa;var date_full   &#x3d; java.text.DateFormat.getDateInstance&#x28;&#xa;                      java.text.DateFormat.FULL&#xa;                  ,   locale&#xa;                  &#x29;.format&#x28;date&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;day in year&#x3a; 1..366&#xa;var simpleDateFormat   &#x3d; java.text.SimpleDateFormat&#x28;&#x22;D&#x22;,locale&#x29;&#x3b;&#xa;var day_in_year        &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;day in month&#x3a; 1..31&#xa;simpleDateFormat.applyPattern&#x28;&#x22;d&#x22;&#x29;&#x3b;&#xa;var day_in_month       &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Monday&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;EEEE&#x22;&#x29;&#x3b;&#xa;var day_name           &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Mon&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;E&#x22;&#x29;&#x3b;&#xa;var day_abbreviation   &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;week in year, 1..53&#xa;simpleDateFormat.applyPattern&#x28;&#x22;ww&#x22;&#x29;&#x3b;&#xa;var week_in_year       &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;week in month, 1..5&#xa;simpleDateFormat.applyPattern&#x28;&#x22;W&#x22;&#x29;&#x3b;&#xa;var week_in_month      &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;month number in year, 1..12&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MM&#x22;&#x29;&#x3b;&#xa;var month_number       &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;September&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MMMM&#x22;&#x29;&#x3b;&#xa;var month_name         &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;en-us example&#x3a; &#x22;Sep&#x22;&#xa;simpleDateFormat.applyPattern&#x28;&#x22;MMM&#x22;&#x29;&#x3b;&#xa;var month_abbreviation &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;2 digit representation of the year, example&#x3a; &#x22;07&#x22; for 2007&#xa;simpleDateFormat.applyPattern&#x28;&#x22;yy&#x22;&#x29;&#x3b;&#xa;var year2              &#x3d; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;4 digit representation of the year, example&#x3a;  2007&#xa;simpleDateFormat.applyPattern&#x28;&#x22;yyyy&#x22;&#x29;&#x3b;&#xa;var year4              &#x3d; &#x22;&#x22; &#x2b; simpleDateFormat.format&#x28;date&#x29;&#x3b;&#xa;&#x2f;&#x2f;handling Quarters is a DIY&#xa;var quarter_name &#x3d; &#x22;Q&#x22;&#x3b;&#xa;var quarter_number&#x3b;&#xa;switch&#x28;parseInt&#x28;month_number&#x29;&#x29;&#x7b;&#xa;    case 1&#x3a; case 2&#x3a; case 3&#x3a; quarter_number &#x3d; &#x22;1&#x22;&#x3b; break&#x3b;&#xa;    case 4&#x3a; case 5&#x3a; case 6&#x3a; quarter_number &#x3d; &#x22;2&#x22;&#x3b; break&#x3b;&#xa;    case 7&#x3a; case 8&#x3a; case 9&#x3a; quarter_number &#x3d; &#x22;3&#x22;&#x3b; break&#x3b;&#xa;    case 10&#x3a; case 11&#x3a; case 12&#x3a; quarter_number &#x3d; &#x22;4&#x22;&#x3b; break&#x3b;&#xa;&#x7d;&#xa;quarter_name &#x2b;&#x3d; quarter_number&#x3b;&#xa;&#xa;&#x2f;&#x2f;get the local yes&#x2f;no values&#xa;var yes &#x3d; local_yes.getString&#x28;&#x29;&#x3b;&#xa;var no &#x3d; local_no.getString&#x28;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;initialize for week calculations&#xa;var first_day_of_week &#x3d; calendar.getFirstDayOfWeek&#x28;&#x29;&#x3b;&#xa;var day_of_week &#x3d; java.util.Calendar.DAY_OF_WEEK&#x3b;&#xa;&#xa;&#x2f;&#x2f;find out if this is the first day of the week&#xa;var is_first_day_in_week&#x3b;&#xa;if&#x28;first_day_of_week&#x3d;&#x3d;calendar.get&#x28;day_of_week&#x29;&#x29;&#x7b;&#xa;    is_first_day_in_week &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_first_day_in_week &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;calculate the next day&#xa;calendar.add&#x28;calendar.DAY_OF_MONTH,1&#x29;&#x3b;&#xa;&#x2f;&#x2f;get the next calendar date&#xa;var next_day &#x3d; new java.util.Date&#x28;calendar.getTimeInMillis&#x28;&#x29;&#x29;&#x3b;&#xa;&#xa;&#x2f;&#x2f;find out if this is the first day of the week&#xa;var is_last_day_in_week&#x3b;&#xa;if&#x28;first_day_of_week&#x3d;&#x3d;calendar.get&#x28;day_of_week&#x29;&#x29;&#x7b;&#xa;    is_last_day_in_week &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_last_day_in_week &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;find out if this is the first day of the month&#xa;var is_first_day_of_month&#x3b;&#xa;if&#x28;day_in_month &#x3d;&#x3d; 1&#x29;&#x7b;&#xa;    is_first_day_in_month &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_first_day_in_month &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;find out if this is the last day in the month&#xa;var is_last_day_of_month&#x3b;&#xa;if&#x28;java.text.SimpleDateFormat&#x28;&#x22;d&#x22;,locale&#x29;.format&#x28;next_day&#x29;&#x3d;&#x3d;1&#x29;&#x7b;&#xa;    is_last_day_in_month &#x3d; yes&#x3b;&#xa;&#x7d; else &#x7b;&#xa;    is_last_day_in_month &#x3d; no&#x3b;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2f;date &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; month_number &#x2b; &#x22;-&#x22; &#x2b; day_in_month&#xa;var year_quarter            &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; quarter_name&#x3b;&#xa;var year_month_number       &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; month_number&#x3b;&#xa;var year_month_abbreviation &#x3d; year4 &#x2b; &#x22;-&#x22; &#x2b; month_abbreviation&#x3b;&#xa;&#xa;var date_key &#x3d; year4 &#x2b; month_number &#x2b; &#x28;day_in_month&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29; &#x2b; day_in_month&#x3b;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>date</name>
         <rename>date</rename>
         <type>Date</type>
@@ -341,8 +362,8 @@
         <replace>N</replace>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>321</xloc>
-      <yloc>114</yloc>
+      <xloc>304</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -370,8 +391,8 @@
       <max_value>9999999</max_value>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>166</xloc>
-      <yloc>114</yloc>
+      <xloc>144</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -456,8 +477,8 @@
     <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>166</xloc>
-      <yloc>21</yloc>
+      <xloc>144</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -598,8 +619,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>166</xloc>
-      <yloc>199</yloc>
+      <xloc>304</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

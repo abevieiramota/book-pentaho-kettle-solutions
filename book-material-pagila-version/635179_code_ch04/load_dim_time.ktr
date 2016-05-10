@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,8 +66,12 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
+  <created_user/>
+  <created_date>2016&#x2f;05&#x2f;10 19&#x3a;06&#x3a;04.601</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2008&#47;10&#47;23 07:58:26.439</modified_date>
+  <modified_date>2008&#x2f;10&#x2f;23 07&#x3a;58&#x3a;26.439</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
@@ -109,9 +118,9 @@
     </notepad>
     <notepad>
       <note>Load</note>
-      <xloc>515</xloc>
-      <yloc>150</yloc>
-      <width>34</width>
+      <xloc>432</xloc>
+      <yloc>80</yloc>
+      <width>35</width>
       <heigth>28</heigth>
       <fontname>Microsoft Sans Serif</fontname>
       <fontsize>8</fontsize>
@@ -130,60 +139,57 @@
     </notepad>
   </notepads>
   <connection>
-    <name>sakila_dwh</name>
+    <name>pagila</name>
     <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>sakila_dwh</database>
+    <type>POSTGRESQL</type>
+    <access>JNDI</access>
+    <database>pagila</database>
     <port>3306</port>
-    <username>sakila_dwh</username>
-    <password>Encrypted 2be98afc86aa78185a010a271e196b8d2</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Generate Seconds</from><to>Seconds Sequence</to><enabled>Y</enabled> </hop>  <hop> <from>Generate Minutes</from><to>Minutes Sequence</to><enabled>Y</enabled> </hop>  <hop> <from>Generate Hours</from><to>Hours Sequence</to><enabled>Y</enabled> </hop>  <hop> <from>Seconds Sequence</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>  <hop> <from>Minutes Sequence</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>  <hop> <from>Hours Sequence</from><to>Calculate hours12</to><enabled>Y</enabled> </hop>  <hop> <from>Calculate hours12</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>  <hop> <from>Cartesian Product</from><to>Caclulate Time</to><enabled>Y</enabled> </hop>  <hop> <from>Caclulate Time</from><to>Table output dim_time</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Generate Seconds</from><to>Seconds Sequence</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generate Minutes</from><to>Minutes Sequence</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generate Hours</from><to>Hours Sequence</to><enabled>Y</enabled> </hop>
+  <hop> <from>Seconds Sequence</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
+  <hop> <from>Minutes Sequence</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
+  <hop> <from>Hours Sequence</from><to>Calculate hours12</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculate hours12</from><to>Cartesian Product</to><enabled>Y</enabled> </hop>
+  <hop> <from>Cartesian Product</from><to>Caclulate Time</to><enabled>Y</enabled> </hop>
+  <hop> <from>Caclulate Time</from><to>Converte tipos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Converte tipos</from><to>Table output dim_time</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Caclulate Time</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <compatible>Y</compatible>
+    <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#47;&#47;Script here
-var time = &quot;&quot; 
-         + hours24.getInteger()
-         + &quot;:&quot;
-         + minutes.getInteger()
-         + &quot;:&quot;
-         + seconds.getInteger()
-;
-var time_key = (hours24.getInteger()&lt;10?&quot;0&quot;:&quot;&quot;)
-             + hours24.getInteger()
-             + (minutes.getInteger()&lt;10?&quot;0&quot;:&quot;&quot;)
-             + minutes.getInteger()
-             + (seconds.getInteger()&lt;10?&quot;0&quot;:&quot;&quot;)
-             + seconds.getInteger()
-;</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;var time &#x3d; &#x22;&#x22; &#xa;         &#x2b; hours24.getInteger&#x28;&#x29;&#xa;         &#x2b; &#x22;&#x3a;&#x22;&#xa;         &#x2b; minutes.getInteger&#x28;&#x29;&#xa;         &#x2b; &#x22;&#x3a;&#x22;&#xa;         &#x2b; seconds.getInteger&#x28;&#x29;&#xa;&#x3b;&#xa;var time_key &#x3d; &#x28;hours24.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; hours24.getInteger&#x28;&#x29;&#xa;             &#x2b; &#x28;minutes.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; minutes.getInteger&#x28;&#x29;&#xa;             &#x2b; &#x28;seconds.getInteger&#x28;&#x29;&#x3c;10&#x3f;&#x22;0&#x22;&#x3a;&#x22;&#x22;&#x29;&#xa;             &#x2b; seconds.getInteger&#x28;&#x29;&#xa;&#x3b;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>time</name>
         <rename>time</rename>
         <type>String</type>
@@ -209,17 +215,17 @@ var time_key = (hours24.getInteger()&lt;10?&quot;0&quot;:&quot;&quot;)
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <compatible>Y</compatible>
+    <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#47;&#47;Script here
-var hours12 = hours24.getInteger() % 12;
-var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;var hours12 &#x3d; hours24.getInteger&#x28;&#x29; &#x25; 12&#x3b;&#xa;var am_pm &#x3d; &#x28;hours24 &#x3e;&#x3d; 12 &#x3f; &#x27;PM&#x27; &#x3a; &#x27;AM&#x27;&#x29;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>hours12</name>
         <rename>hours12</rename>
         <type>Number</type>
@@ -245,12 +251,13 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>JoinRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <directory>%%java.io.tmpdir%%</directory>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
       <prefix>out</prefix>
       <cache_size>500</cache_size>
       <main/>
@@ -258,7 +265,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
 <condition>
  <negated>N</negated>
  <leftvalue/>
- <function>=</function>
+ <function>&#x3d;</function>
  <rightvalue/>
  </condition>
     </compare>
@@ -275,6 +282,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -291,9 +299,14 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <limit>24</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>47</xloc>
@@ -307,6 +320,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -323,9 +337,14 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <limit>60</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>47</xloc>
@@ -339,6 +358,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -355,9 +375,14 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <limit>60</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>47</xloc>
@@ -371,6 +396,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -378,7 +404,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
            </partitioning>
       <valuename>hours24</valuename>
       <use_database>N</use_database>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <schema/>
       <seqname>SEQ_</seqname>
       <use_counter>Y</use_counter>
@@ -399,6 +425,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -406,7 +433,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
            </partitioning>
       <valuename>minutes</valuename>
       <use_database>N</use_database>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <schema/>
       <seqname>SEQ_</seqname>
       <use_counter>Y</use_counter>
@@ -427,6 +454,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -434,7 +462,7 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
            </partitioning>
       <valuename>seconds</valuename>
       <use_database>N</use_database>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <schema/>
       <seqname>SEQ_</seqname>
       <use_counter>Y</use_counter>
@@ -455,13 +483,14 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila_dwh</connection>
-    <schema/>
+    <connection>pagila</connection>
+    <schema>dw</schema>
     <table>dim_time</table>
     <commit>100</commit>
     <truncate>N</truncate>
@@ -509,8 +538,98 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>517</xloc>
-      <yloc>202</yloc>
+      <xloc>656</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Converte tipos</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>seconds_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>seconds</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>minutes_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>minutes</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>hours24_row</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>hours24</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>hours12</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>am_pm</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>time</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>time_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>time</name>
+        <rename>time</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>HH&#x3a;mm&#x3a;ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>time_key</name>
+        <rename>time_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -520,4 +639,5 @@ var am_pm = (hours24 &gt;= 12 ? &apos;PM&apos; : &apos;AM&apos;)</jsScript_scrip
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
