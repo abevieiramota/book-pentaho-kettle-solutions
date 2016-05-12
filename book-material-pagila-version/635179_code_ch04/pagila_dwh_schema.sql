@@ -15,31 +15,34 @@ CREATE TABLE `dim_actor` (
 -- Table structure for table `dim_customer`
 --
 
-DROP TABLE IF EXISTS `dim_customer`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_customer` (
-  `customer_key` int(8) NOT NULL AUTO_INCREMENT,
-  `customer_last_update` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `customer_id` int(8) DEFAULT NULL,
-  `customer_first_name` varchar(45) DEFAULT NULL,
-  `customer_last_name` varchar(45) DEFAULT NULL,
-  `customer_email` varchar(50) DEFAULT NULL,
-  `customer_active` char(3) DEFAULT NULL,
-  `customer_created` date DEFAULT NULL,
-  `customer_address` varchar(64) DEFAULT NULL,
-  `customer_district` varchar(20) DEFAULT NULL,
-  `customer_postal_code` varchar(10) DEFAULT NULL,
-  `customer_phone_number` varchar(20) DEFAULT NULL,
-  `customer_city` varchar(50) DEFAULT NULL,
-  `customer_country` varchar(50) DEFAULT NULL,
-  `customer_version_number` smallint(5) DEFAULT NULL,
-  `customer_valid_from` date DEFAULT NULL,
-  `customer_valid_through` date DEFAULT NULL,
-  PRIMARY KEY (`customer_key`),
-  KEY `customer_id` (`customer_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=601 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE dw.dim_customer (
+  customer_key integer NOT NULL,
+  customer_last_update timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
+  customer_id integer DEFAULT NULL,
+  customer_first_name character varying(45) DEFAULT NULL,
+  customer_last_name character varying(45) DEFAULT NULL,
+  customer_email character varying(50) DEFAULT NULL,
+  customer_active character varying(3) DEFAULT NULL,
+  customer_created date DEFAULT NULL,
+  customer_address character varying(64) DEFAULT NULL,
+  customer_district character varying(20) DEFAULT NULL,
+  customer_postal_code character varying(10) DEFAULT NULL,
+  customer_phone_number character varying(20) DEFAULT NULL,
+  customer_city character varying(50) DEFAULT NULL,
+  customer_country character varying(50) DEFAULT NULL,
+  customer_version_number smallint DEFAULT NULL,
+  customer_valid_from date DEFAULT NULL,
+  customer_valid_through date DEFAULT NULL,
+  constraint dim_customer_customer_key primary key (customer_key)
+) 
+CREATE SEQUENCE dw.dim_customer_customer_key_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 200
+  CACHE 1;
+ALTER TABLE dw.dim_customer_customer_key_seq
+  OWNER TO postgres;
 
 --
 -- Table structure for table `dim_date`
