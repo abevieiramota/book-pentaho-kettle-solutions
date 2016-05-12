@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>N</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>N</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -52,6 +57,7 @@
     <shared_objects_file/>
     <capture_step_performance>N</capture_step_performance>
     <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit/>
     <dependencies>
     </dependencies>
     <partitionschemas>
@@ -60,15 +66,19 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
+  <created_user/>
+  <created_date>2016&#x2f;05&#x2f;12 19&#x3a;12&#x3a;00.421</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2008&#47;10&#47;25 22:20:48.187</modified_date>
+  <modified_date>2008&#x2f;10&#x2f;25 22&#x3a;20&#x3a;48.187</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
-      <note>Pull new&#47;updated Staff from source</note>
+      <note>Pull new&#x2f;updated Staff from source</note>
       <xloc>307</xloc>
       <yloc>122</yloc>
-      <width>185</width>
+      <width>199</width>
       <heigth>28</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -86,10 +96,10 @@
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>Map Active flag in source to proper Yes&#47;No values</note>
+      <note>Map Active flag in source to proper Yes&#x2f;No values</note>
       <xloc>309</xloc>
       <yloc>187</yloc>
-      <width>261</width>
+      <width>275</width>
       <heigth>28</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -107,11 +117,10 @@
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>Load the slowly changing Type 2 staff dimension 
-(Add a new dimension row for each change)</note>
+      <note>Load the slowly changing Type 2 staff dimension &#xa;&#x28;Add a new dimension row for each change&#x29;</note>
       <xloc>309</xloc>
       <yloc>266</yloc>
-      <width>257</width>
+      <width>272</width>
       <heigth>46</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -129,7 +138,7 @@
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>get date&#47;time of last update from target</note>
+      <note>get date&#x2f;time of last update from target</note>
       <xloc>307</xloc>
       <yloc>10</yloc>
       <width>207</width>
@@ -151,14 +160,14 @@
     </notepad>
   </notepads>
   <connection>
-    <name>sakila</name>
+    <name>pagila</name>
     <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>sakila</database>
+    <type>POSTGRESQL</type>
+    <access>JNDI</access>
+    <database>pagila</database>
     <port>3306</port>
-    <username>sakila</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79bd71d59ba3db</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -167,21 +176,22 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
-    <name>sakila_dwh</name>
+    <name>pagila</name>
     <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>sakila_dwh</database>
+    <type>POSTGRESQL</type>
+    <access>JNDI</access>
+    <database>pagila</database>
     <port>3306</port>
-    <username>sakila_dwh</username>
-    <password>Encrypted 2be98afc86aa78185a010a271e196b8d2</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -190,27 +200,33 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Select values</from><to>Map Active</to><enabled>Y</enabled> </hop>  <hop> <from>Map Active</from><to>Load dim_staff SCD2</to><enabled>Y</enabled> </hop>  <hop> <from>Staff</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>max_dim_staff_last_update</from><to>Staff</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Select values</from><to>Map Active</to><enabled>Y</enabled> </hop>
+  <hop> <from>Map Active</from><to>Load dim_staff SCD2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Staff</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>max_dim_staff_last_update</from><to>Staff</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Load dim_staff SCD2</name>
     <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <schema/>
+      <schema>dw</schema>
       <table>dim_staff</table>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <commit>100</commit>
       <update>Y</update>
       <fields>
@@ -246,12 +262,12 @@
         <return>
           <name>staff_key</name>
           <rename/>
-          <creation_method>autoinc</creation_method>
-          <use_autoinc>Y</use_autoinc>
+          <creation_method>sequence</creation_method>
+          <use_autoinc>N</use_autoinc>
           <version>staff_version_number</version>
         </return>
       </fields>
-      <sequence/>
+      <sequence>dim_staff_staff_key_seq</sequence>
       <min_year>1900</min_year>
       <max_year>2199</max_year>
       <cache_size>0</cache_size>
@@ -272,6 +288,7 @@
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -303,6 +320,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -315,6 +333,11 @@
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
         <currency_symbol/>
@@ -332,26 +355,14 @@
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila</connection>
-    <sql>SELECT
-  staff_id
-, first_name
-, last_name
-, address_id
-, picture
-, email
-, store_id
-, active
-, username
-, password
-, last_update
-FROM staff
-WHERE last_update &gt; ?</sql>
+    <connection>pagila</connection>
+    <sql>SELECT&#xa;  staff_id&#xa;, first_name&#xa;, last_name&#xa;, address_id&#xa;, picture&#xa;, email&#xa;, store_id&#xa;, active&#xa;, username&#xa;, password&#xa;, last_update&#xa;FROM staff&#xa;WHERE last_update &#x3e; &#x3f;</sql>
     <limit>0</limit>
     <lookup>max_dim_staff_last_update</lookup>
     <execute_each_row>N</execute_each_row>
@@ -370,18 +381,14 @@ WHERE last_update &gt; ?</sql>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila_dwh</connection>
-    <sql>SELECT	COALESCE(
-			MAX(staff_last_update)
-        ,   &apos;1970-01-01 00:00:00&apos;
-		) max_dim_staff_last_update
-FROM	dim_staff
-</sql>
+    <connection>pagila</connection>
+    <sql>SELECT	COALESCE&#x28;&#xa;			MAX&#x28;staff_last_update&#x29;&#xa;        ,   &#x27;1970-01-01 00&#x3a;00&#x3a;00&#x27;&#xa;		&#x29; max_dim_staff_last_update&#xa;FROM	dw.dim_staff&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -400,4 +407,5 @@ FROM	dim_staff
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

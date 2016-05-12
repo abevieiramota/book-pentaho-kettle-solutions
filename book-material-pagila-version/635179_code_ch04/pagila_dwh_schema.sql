@@ -142,24 +142,28 @@ CREATE TABLE `dim_film_actor_bridge` (
 -- Table structure for table `dim_staff`
 --
 
-DROP TABLE IF EXISTS `dim_staff`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_staff` (
-  `staff_key` int(8) NOT NULL AUTO_INCREMENT,
-  `staff_last_update` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `staff_first_name` varchar(45) DEFAULT NULL,
-  `staff_last_name` varchar(45) DEFAULT NULL,
-  `staff_id` int(8) DEFAULT NULL,
-  `staff_store_id` int(8) DEFAULT NULL,
-  `staff_version_number` smallint(5) DEFAULT NULL,
-  `staff_valid_from` date DEFAULT NULL,
-  `staff_valid_through` date DEFAULT NULL,
-  `staff_active` char(3) DEFAULT NULL,
-  PRIMARY KEY (`staff_key`),
-  KEY `staff_id` (`staff_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE dw.dim_staff (
+  staff_key integer not null,
+  staff_last_update timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
+  staff_first_name character varying(45) DEFAULT NULL,
+  staff_last_name character varying(45) DEFAULT NULL,
+  staff_id integer DEFAULT NULL,
+  staff_store_id integer DEFAULT NULL,
+  staff_version_number smallint DEFAULT NULL,
+  staff_valid_from date DEFAULT NULL,
+  staff_valid_through date DEFAULT NULL,
+  staff_active character varying(3) DEFAULT NULL,
+  constraint dim_staff_pkey primary key (staff_key)
+)
+
+CREATE SEQUENCE dw.dim_staff_staff_key_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 200
+  CACHE 1;
+ALTER TABLE dw.dim_staff_staff_key_seq
+  OWNER TO postgres;
 
 --
 -- Table structure for table `dim_store`
