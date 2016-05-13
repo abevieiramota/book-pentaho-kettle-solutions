@@ -88,70 +88,69 @@ CREATE TABLE dw.dim_date (
 -- Table structure for table `dim_film`
 --
 
-DROP TABLE IF EXISTS `dim_film`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_film` (
-  `film_key` int(8) NOT NULL AUTO_INCREMENT,
-  `film_last_update` datetime NOT NULL,
-  `film_title` varchar(64) NOT NULL,
-  `film_description` text NOT NULL,
-  `film_release_year` smallint(5) NOT NULL,
-  `film_language` varchar(20) NOT NULL,
-  `film_original_language` varchar(20) NOT NULL,
-  `film_rental_duration` tinyint(3) DEFAULT NULL,
-  `film_rental_rate` decimal(4,2) DEFAULT NULL,
-  `film_duration` int(8) DEFAULT NULL,
-  `film_replacement_cost` decimal(5,2) DEFAULT NULL,
-  `film_rating_code` char(5) DEFAULT NULL,
-  `film_rating_text` varchar(30) DEFAULT NULL,
-  `film_has_trailers` char(4) DEFAULT NULL,
-  `film_has_commentaries` char(4) DEFAULT NULL,
-  `film_has_deleted_scenes` char(4) DEFAULT NULL,
-  `film_has_behind_the_scenes` char(4) DEFAULT NULL,
-  `film_in_category_action` char(4) DEFAULT NULL,
-  `film_in_category_animation` char(4) DEFAULT NULL,
-  `film_in_category_children` char(4) DEFAULT NULL,
-  `film_in_category_classics` char(4) DEFAULT NULL,
-  `film_in_category_comedy` char(4) DEFAULT NULL,
-  `film_in_category_documentary` char(4) DEFAULT NULL,
-  `film_in_category_drama` char(4) DEFAULT NULL,
-  `film_in_category_family` char(4) DEFAULT NULL,
-  `film_in_category_foreign` char(4) DEFAULT NULL,
-  `film_in_category_games` char(4) DEFAULT NULL,
-  `film_in_category_horror` char(4) DEFAULT NULL,
-  `film_in_category_music` char(4) DEFAULT NULL,
-  `film_in_category_new` char(4) DEFAULT NULL,
-  `film_in_category_scifi` char(4) DEFAULT NULL,
-  `film_in_category_sports` char(4) DEFAULT NULL,
-  `film_in_category_travel` char(4) DEFAULT NULL,
-  `film_id` int(11) NOT NULL,
-  PRIMARY KEY (`film_key`)
-) ENGINE=MyISAM AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE dw.dim_film (
+  film_key integer NOT NULL default nextval('dw.dim_film_film_key_seq'),
+  film_last_update timestamp NOT NULL,
+  film_title character varying(64) NOT NULL,
+  film_description text NOT NULL,
+  film_release_year smallint NOT NULL,
+  film_language character varying(20) NOT NULL,
+  film_rental_duration smallint DEFAULT NULL,
+  film_rental_rate decimal(4,2) DEFAULT NULL,
+  film_duration integer DEFAULT NULL,
+  film_replacement_cost decimal(5,2) DEFAULT NULL,
+  film_rating_code character varying(5) DEFAULT NULL,
+  film_rating_text character varying(30) DEFAULT NULL,
+  film_has_trailers character varying(4) DEFAULT NULL,
+  film_has_commentaries character varying(4) DEFAULT NULL,
+  film_has_deleted_scenes character varying(4) DEFAULT NULL,
+  film_has_behind_the_scenes character varying(4) DEFAULT NULL,
+  film_in_category_action character varying(4) DEFAULT NULL,
+  film_in_category_animation character varying(4) DEFAULT NULL,
+  film_in_category_children character varying(4) DEFAULT NULL,
+  film_in_category_classics character varying(4) DEFAULT NULL,
+  film_in_category_comedy character varying(4) DEFAULT NULL,
+  film_in_category_documentary character varying(4) DEFAULT NULL,
+  film_in_category_drama character varying(4) DEFAULT NULL,
+  film_in_category_family character varying(4) DEFAULT NULL,
+  film_in_category_foreign character varying(4) DEFAULT NULL,
+  film_in_category_games character varying(4) DEFAULT NULL,
+  film_in_category_horror character varying(4) DEFAULT NULL,
+  film_in_category_music character varying(4) DEFAULT NULL,
+  film_in_category_new character varying(4) DEFAULT NULL,
+  film_in_category_scifi character varying(4) DEFAULT NULL,
+  film_in_category_sports character varying(4) DEFAULT NULL,
+  film_in_category_travel character varying(4) DEFAULT NULL,
+  film_id integer NOT NULL,
+  constraint dim_film_pkey primary key (film_key)
+);
+
+CREATE SEQUENCE dw.dim_film_film_key_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 200
+  CACHE 1;
+ALTER TABLE dw.dim_film_film_key_seq
+  OWNER TO postgres;
 
 --
 -- Table structure for table `dim_film_actor_bridge`
 --
 
-DROP TABLE IF EXISTS `dim_film_actor_bridge`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_film_actor_bridge` (
-  `film_key` int(8) NOT NULL,
-  `actor_key` int(10) NOT NULL,
-  `actor_weighting_factor` decimal(3,2) NOT NULL,
-  PRIMARY KEY (`film_key`,`actor_key`),
-  KEY `dim_actor_dim_film_actor_bridge_fk` (`actor_key`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE dw.dim_film_actor_bridge (
+  film_key integer NOT NULL,
+  actor_key integer NOT NULL,
+  actor_weighting_factor decimal(3,2) NOT NULL,
+  constraint dim_film_actor_brige_pkey PRIMARY KEY (film_key,actor_key)
+);
 
 --
 -- Table structure for table `dim_staff`
 --
 
 CREATE TABLE dw.dim_staff (
-  staff_key integer not null,
+  staff_key integer not null default nextval('dw.dim_staff_staff_key_seq'),
   staff_last_update timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
   staff_first_name character varying(45) DEFAULT NULL,
   staff_last_name character varying(45) DEFAULT NULL,
@@ -162,7 +161,7 @@ CREATE TABLE dw.dim_staff (
   staff_valid_through date DEFAULT NULL,
   staff_active character varying(3) DEFAULT NULL,
   constraint dim_staff_pkey primary key (staff_key)
-)
+);
 
 CREATE SEQUENCE dw.dim_staff_staff_key_seq
   INCREMENT 1

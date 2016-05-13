@@ -186,7 +186,7 @@
   <order>
   <hop> <from>Day Sequence</from><to>Calculate Dimension Attributes</to><enabled>Y</enabled> </hop>
   <hop> <from>Generate 10 years</from><to>Day Sequence</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculate Dimension Attributes</from><to>Load dim_date</to><enabled>N</enabled> </hop>
+  <hop> <from>Calculate Dimension Attributes</from><to>Load dim_date</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Calculate Dimension Attributes</name>
