@@ -1,16 +1,21 @@
-DROP TABLE IF EXISTS `dim_actor`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_actor` (
-  `actor_key` int(10) NOT NULL AUTO_INCREMENT,
-  `actor_last_update` datetime NOT NULL,
-  `actor_last_name` varchar(45) NOT NULL,
-  `actor_first_name` varchar(45) NOT NULL,
-  `actor_id` int(11) NOT NULL,
-  PRIMARY KEY (`actor_key`)
-) ENGINE=MyISAM AUTO_INCREMENT=201 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE dw.dim_actor (
+  actor_key integer default nextval('dw.dim_actor_actor_key_seq'),
+  actor_last_update timestamp NOT NULL,
+  actor_last_name character varying(45) NOT NULL,
+  actor_first_name character varying(45) NOT NULL,
+  actor_id integer NOT NULL,
+  constraint dim_actor_pkey primary key (actor_key)
+);
 
+CREATE SEQUENCE dw.dim_actor_actor_key_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 200
+  CACHE 1;
+ALTER TABLE dw.dim_actor_actor_key_seq
+  OWNER TO postgres;
+  
 --
 -- Table structure for table `dim_customer`
 --
@@ -34,7 +39,7 @@ CREATE TABLE dw.dim_customer (
   customer_valid_from date DEFAULT NULL,
   customer_valid_through date DEFAULT NULL,
   constraint dim_customer_customer_key primary key (customer_key)
-) 
+); 
 CREATE SEQUENCE dw.dim_customer_customer_key_seq
   INCREMENT 1
   MINVALUE 1
