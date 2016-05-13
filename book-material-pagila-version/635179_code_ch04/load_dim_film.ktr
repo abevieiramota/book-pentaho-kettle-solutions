@@ -201,8 +201,8 @@
     </notepad>
     <notepad>
       <note>Turn special features list &#xa;into separate rows &#x28;normalize&#x29;</note>
-      <xloc>127</xloc>
-      <yloc>302</yloc>
+      <xloc>48</xloc>
+      <yloc>240</yloc>
       <width>161</width>
       <heigth>46</heigth>
       <fontname>Microsoft Sans Serif</fontname>
@@ -371,35 +371,10 @@
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
-  <connection>
-    <name>pagila</name>
-    <server>localhost</server>
-    <type>POSTGRESQL</type>
-    <access>JNDI</access>
-    <database>pagila</database>
-    <port>3306</port>
-    <username/>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
-      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
   <order>
   <hop> <from>Film</from><to>Lookup Language</to><enabled>Y</enabled> </hop>
   <hop> <from>Rating Text</from><to>Normalize Special Features</to><enabled>Y</enabled> </hop>
   <hop> <from>Normalize Special Features</from><to>Add Yes&#x2f;No</to><enabled>Y</enabled> </hop>
-  <hop> <from>Add Yes&#x2f;No</from><to>Denormalize Special Features to &#x27;Yes&#x27; Columns</to><enabled>Y</enabled> </hop>
   <hop> <from>Denormalize Special Features to &#x27;Yes&#x27; Columns</from><to>Set Empty Special Feature Columns  to &#x27;No&#x27;</to><enabled>Y</enabled> </hop>
   <hop> <from>Denormalize Categories to &#x27;Yes&#x27; Columns</from><to>Set Empty Category Columns to &#x27;No&#x27;</to><enabled>Y</enabled> </hop>
   <hop> <from>Lookup Category</from><to>Add Yes</to><enabled>Y</enabled> </hop>
@@ -416,6 +391,8 @@
   <hop> <from>Set Empty Special Feature Columns  to &#x27;No&#x27;</from><to>Get  film categories</to><enabled>Y</enabled> </hop>
   <hop> <from>Get  film categories</from><to>Lookup Category</to><enabled>Y</enabled> </hop>
   <hop> <from>Lookup Language</from><to>Rating Text</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add Yes&#x2f;No</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>Denormalize Special Features to &#x27;Yes&#x27; Columns</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Add Yes</name>
@@ -489,8 +466,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>410</xloc>
-      <yloc>370</yloc>
+      <xloc>208</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -597,75 +574,6 @@
       <group>
         <field>
           <name>film_id</name>
-          </field>
-        <field>
-          <name>title</name>
-          </field>
-        <field>
-          <name>description</name>
-          </field>
-        <field>
-          <name>release_year</name>
-          </field>
-        <field>
-          <name>language_id</name>
-          </field>
-        <field>
-          <name>rental_duration</name>
-          </field>
-        <field>
-          <name>rental_rate</name>
-          </field>
-        <field>
-          <name>length</name>
-          </field>
-        <field>
-          <name>replacement_cost</name>
-          </field>
-        <field>
-          <name>rating</name>
-          </field>
-        <field>
-          <name>special_features</name>
-          </field>
-        <field>
-          <name>last_update</name>
-          </field>
-        <field>
-          <name>language</name>
-          </field>
-        <field>
-          <name>rating_text</name>
-          </field>
-        <field>
-          <name>No</name>
-          </field>
-        <field>
-          <name>tmp_has_trailers</name>
-          </field>
-        <field>
-          <name>tmp_has_commentaries</name>
-          </field>
-        <field>
-          <name>tmp_has_deleted_scenes</name>
-          </field>
-        <field>
-          <name>tmp_has_behind_the_scenes</name>
-          </field>
-        <field>
-          <name>has_behind_the_scenes</name>
-          </field>
-        <field>
-          <name>has_commentaries</name>
-          </field>
-        <field>
-          <name>has_deleted_scenes</name>
-          </field>
-        <field>
-          <name>has_trailers</name>
-          </field>
-        <field>
-          <name>Yes</name>
           </field>
         </group>
       <fields>
@@ -917,45 +825,6 @@
       <group>
         <field>
           <name>film_id</name>
-          </field>
-        <field>
-          <name>title</name>
-          </field>
-        <field>
-          <name>description</name>
-          </field>
-        <field>
-          <name>release_year</name>
-          </field>
-        <field>
-          <name>language_id</name>
-          </field>
-        <field>
-          <name>rental_duration</name>
-          </field>
-        <field>
-          <name>rental_rate</name>
-          </field>
-        <field>
-          <name>length</name>
-          </field>
-        <field>
-          <name>replacement_cost</name>
-          </field>
-        <field>
-          <name>rating</name>
-          </field>
-        <field>
-          <name>special_features</name>
-          </field>
-        <field>
-          <name>last_update</name>
-          </field>
-        <field>
-          <name>language</name>
-          </field>
-        <field>
-          <name>rating_text</name>
           </field>
         </group>
       <fields>
@@ -1457,8 +1326,8 @@
    <delimiter_is_regex>N</delimiter_is_regex>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>259</xloc>
-      <yloc>370</yloc>
+      <xloc>80</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1900,6 +1769,40 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>252</xloc>
       <yloc>68</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>Y</unique_rows>
+    <fields>
+      <field>
+        <name>film_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>336</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
