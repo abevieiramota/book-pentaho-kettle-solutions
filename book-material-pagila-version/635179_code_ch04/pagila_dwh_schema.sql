@@ -172,29 +172,33 @@ ALTER TABLE dw.dim_staff_staff_key_seq
 -- Table structure for table `dim_store`
 --
 
-DROP TABLE IF EXISTS `dim_store`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `dim_store` (
-  `store_key` int(8) NOT NULL AUTO_INCREMENT,
-  `store_last_update` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `store_id` int(8) DEFAULT NULL,
-  `store_address` varchar(64) DEFAULT NULL,
-  `store_district` varchar(20) DEFAULT NULL,
-  `store_postal_code` varchar(10) DEFAULT NULL,
-  `store_phone_number` varchar(20) DEFAULT NULL,
-  `store_city` varchar(50) DEFAULT NULL,
-  `store_country` varchar(50) DEFAULT NULL,
-  `store_manager_staff_id` int(8) DEFAULT NULL,
-  `store_manager_first_name` varchar(45) DEFAULT NULL,
-  `store_manager_last_name` varchar(45) DEFAULT NULL,
-  `store_version_number` smallint(5) DEFAULT NULL,
-  `store_valid_from` date DEFAULT NULL,
-  `store_valid_through` date DEFAULT NULL,
-  PRIMARY KEY (`store_key`),
-  KEY `store_id` (`store_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE dw.dim_store (
+  store_key integer NOT NULL,
+  store_last_update timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
+  store_id integer DEFAULT NULL,
+  store_address character varying(64) DEFAULT NULL,
+  store_district character varying(20) DEFAULT NULL,
+  store_postal_code character varying(10) DEFAULT NULL,
+  store_phone_number character varying(20) DEFAULT NULL,
+  store_city character varying(50) DEFAULT NULL,
+  store_country character varying(50) DEFAULT NULL,
+  store_manager_staff_id integer DEFAULT NULL,
+  store_manager_first_name character varying(45) DEFAULT NULL,
+  store_manager_last_name character varying(45) DEFAULT NULL,
+  store_version_number smallint DEFAULT NULL,
+  store_valid_from date DEFAULT NULL,
+  store_valid_through date DEFAULT NULL,
+  constraint dim_store_pkey primary key (store_key)
+);
+
+CREATE SEQUENCE dw.dim_store_store_key_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 200
+  CACHE 1;
+ALTER TABLE dw.dim_store_store_key_seq
+  OWNER TO postgres;
 
 --
 -- Table structure for table `dim_time`
