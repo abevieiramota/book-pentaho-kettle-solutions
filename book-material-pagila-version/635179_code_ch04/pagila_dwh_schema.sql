@@ -223,38 +223,47 @@ CREATE TABLE dw.dim_time
 -- Table structure for table `fact_rental`
 --
 
-DROP TABLE IF EXISTS `fact_rental`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fact_rental` (
-  `customer_key` int(8) NOT NULL,
-  `staff_key` int(8) NOT NULL,
-  `film_key` int(8) NOT NULL,
-  `store_key` int(8) NOT NULL,
-  `rental_date_key` int(8) NOT NULL,
-  `return_date_key` int(10) NOT NULL,
-  `rental_time_key` int(8) NOT NULL,
-  `count_returns` int(10) NOT NULL,
-  `count_rentals` int(8) NOT NULL,
-  `rental_duration` int(11) DEFAULT NULL,
-  `rental_last_update` datetime DEFAULT NULL,
-  `rental_id` int(11) DEFAULT NULL,
-  KEY `dim_store_fact_rental_fk` (`store_key`),
-  KEY `dim_staff_fact_rental_fk` (`staff_key`),
-  KEY `dim_time_fact_rental_fk` (`rental_time_key`),
-  KEY `dim_film_fact_rental_fk` (`film_key`),
-  KEY `dim_date_fact_rental_fk` (`rental_date_key`),
-  KEY `dim_customer_fact_rental_fk` (`customer_key`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+CREATE TABLE dw.fact_rental (
+  customer_key integer NOT NULL,
+  staff_key integer NOT NULL,
+  film_key integer NOT NULL,
+  store_key integer NOT NULL,
+  rental_date_key integer NOT NULL,
+  return_date_key integer NOT NULL,
+  rental_time_key integer NOT NULL,
+  count_returns integer NOT NULL,
+  -- removido count_rentals -> não é calculado nas transformações fornecidas
+  rental_duration integer DEFAULT NULL,
+  rental_last_update timestamp DEFAULT NULL,
+  rental_id integer DEFAULT NULL
+);
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+CREATE INDEX idx_fk_dim_store_store_key
+  ON dw.fact_rental
+  USING btree
+  (store_key);
 
--- Dump completed on 2010-03-04  1:00:33
+CREATE INDEX idx_fk_dim_staff_staff_key
+  ON dw.fact_rental
+  USING btree
+  (staff_key);
+
+CREATE INDEX idx_fk_dim_rental_rental_time_key
+  ON dw.fact_rental
+  USING btree
+  (rental_time_key);
+
+CREATE INDEX idx_fk_dim_film_film_key
+  ON dw.fact_rental
+  USING btree
+  (film_key);
+
+CREATE INDEX idx_fk_dim_date_rental_date_key
+  ON dw.fact_rental
+  USING btree
+  (rental_date_key);
+
+CREATE INDEX idx_fk_dim_date_customer_customer_key
+  ON dw.fact_rental
+  USING btree
+  (customer_key);

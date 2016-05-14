@@ -2,15 +2,14 @@
 <job>
   <name>load_rentals</name>
     <description>This job loads the changes from the Sakila OLTP schema into the rental star schema.</description>
-    <extended_description>First, this job loads all dimension tables in a sequential manner. 
-After all dimensions are loaded, </extended_description>
+    <extended_description>First, this job loads all dimension tables in a sequential manner. &#xa;After all dimensions are loaded, </extended_description>
     <job_version>1.0</job_version>
     <job_status>2</job_status>
-  <directory>&#47;</directory>
+  <directory>&#x2f;</directory>
   <created_user>-</created_user>
-  <created_date>2008&#47;10&#47;26 10:17:06.468</created_date>
+  <created_date>2008&#x2f;10&#x2f;26 10&#x3a;17&#x3a;06.468</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2008&#47;10&#47;26 10:17:06.468</modified_date>
+  <modified_date>2008&#x2f;10&#x2f;26 10&#x3a;17&#x3a;06.468</modified_date>
     <parameters>
     </parameters>
     <slaveservers>
@@ -21,12 +20,12 @@ After all dimensions are loaded, </extended_description>
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_JOB</id><enabled>N</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></job-log-table>
+<field><id>ID_JOB</id><enabled>N</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
 <jobentry-log-table><connection/>
 <schema/>
 <table/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></jobentry-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>COPY_NR</id><enabled>N</enabled><name>COPY_NR</name></field></jobentry-log-table>
 <channel-log-table><connection/>
 <schema/>
 <table/>
@@ -61,7 +60,7 @@ After all dimensions are loaded, </extended_description>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Job.Filename.Directory}&#47;load_dim_store.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;load_dim_store.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -80,6 +79,7 @@ After all dimensions are loaded, </extended_description>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -93,7 +93,7 @@ After all dimensions are loaded, </extended_description>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Job.Filename.Directory}&#47;load_dim_staff.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;load_dim_staff.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -112,6 +112,7 @@ After all dimensions are loaded, </extended_description>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -125,7 +126,7 @@ After all dimensions are loaded, </extended_description>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Job.Filename.Directory}&#47;load_dim_customer.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;load_dim_customer.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -144,6 +145,7 @@ After all dimensions are loaded, </extended_description>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -157,7 +159,7 @@ After all dimensions are loaded, </extended_description>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Job.Filename.Directory}&#47;load_dim_film.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;load_dim_film.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -176,6 +178,7 @@ After all dimensions are loaded, </extended_description>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -189,7 +192,7 @@ After all dimensions are loaded, </extended_description>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Job.Filename.Directory}&#47;load_fact_rental.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;load_fact_rental.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -208,6 +211,7 @@ After all dimensions are loaded, </extended_description>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -221,10 +225,10 @@ After all dimensions are loaded, </extended_description>
       <type>MAIL</type>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>roland.bouman@gmail.com</destination>
+      <destination>abevieiramota&#x40;gmail.com</destination>
       <destinationCc/>
       <destinationBCc/>
-      <replyto>roland.bouman@gmail.com</replyto>
+      <replyto>roland.bouman&#x40;gmail.com</replyto>
       <replytoname>Roland Bouman</replytoname>
       <subject>Load of Sakile DWH Succeeded</subject>
       <include_date>Y</include_date>
@@ -236,7 +240,7 @@ After all dimensions are loaded, </extended_description>
       <zip_name/>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
-      <auth_user>roland.bouman@gmail.com</auth_user>
+      <auth_user>roland.bouman&#x40;gmail.com</auth_user>
       <auth_password>Encrypted 2be98afc86aa7f286a41eab69ce9daac9</auth_password>
       <only_comment>N</only_comment>
       <use_HTML>N</use_HTML>
@@ -244,6 +248,7 @@ After all dimensions are loaded, </extended_description>
       <encoding>UTF-8</encoding>
       <priority>normal</priority>
       <importance>normal</importance>
+      <sensitivity>normal</sensitivity>
       <secureconnectiontype>SSL</secureconnectiontype>
       <replyToAddresses/>
       <filetypes>      </filetypes>      <embeddedimages>
@@ -260,12 +265,12 @@ After all dimensions are loaded, </extended_description>
       <type>MAIL</type>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>administrator@gmail.com</destination>
+      <destination>abevieiramota&#x40;gmail.com</destination>
       <destinationCc/>
       <destinationBCc/>
-      <replyto>administrator@gmail.com</replyto>
+      <replyto>administrator&#x40;gmail.com</replyto>
       <replytoname/>
-      <subject>Load of Sakile DWH Failed!!!</subject>
+      <subject>Load of Sakile DWH Failed&#x21;&#x21;&#x21;</subject>
       <include_date>Y</include_date>
       <contact_person/>
       <contact_phone/>
@@ -275,7 +280,7 @@ After all dimensions are loaded, </extended_description>
       <zip_name/>
       <use_auth>Y</use_auth>
       <use_secure_auth>Y</use_secure_auth>
-      <auth_user>administrator@gmail.com</auth_user>
+      <auth_user>administrator&#x40;gmail.com</auth_user>
       <auth_password>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</auth_password>
       <only_comment>N</only_comment>
       <use_HTML>N</use_HTML>
@@ -283,6 +288,7 @@ After all dimensions are loaded, </extended_description>
       <encoding>UTF-8</encoding>
       <priority>high</priority>
       <importance>high</importance>
+      <sensitivity>normal</sensitivity>
       <secureconnectiontype>SSL</secureconnectiontype>
       <replyToAddresses/>
       <filetypes>        <filetype>LOG</filetype>
@@ -300,7 +306,7 @@ After all dimensions are loaded, </extended_description>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>${Internal.Job.Filename.Directory}&#47;load_dim_actor.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;load_dim_actor.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -319,6 +325,7 @@ After all dimensions are loaded, </extended_description>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -448,4 +455,5 @@ After all dimensions are loaded, </extended_description>
   </hops>
   <notepads>
   </notepads>
+
 </job>

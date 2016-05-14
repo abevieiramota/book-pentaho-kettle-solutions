@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;</directory>
+    <directory>&#x2f;</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +17,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>N</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>N</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +34,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,16 +66,19 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
+  <created_user/>
+  <created_date>2016&#x2f;05&#x2f;14 11&#x3a;09&#x3a;27.520</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2008&#47;10&#47;22 23:24:12.831</modified_date>
+  <modified_date>2008&#x2f;10&#x2f;22 23&#x3a;24&#x3a;12.831</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
-      <note>get date&#47;time of last update from target
-Pull new&#47;updated rentals out of source database</note>
+      <note>get date&#x2f;time of last update from target&#xa;Pull new&#x2f;updated rentals out of source database</note>
       <xloc>483</xloc>
       <yloc>8</yloc>
-      <width>251</width>
+      <width>266</width>
       <heigth>46</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -88,10 +96,10 @@ Pull new&#47;updated rentals out of source database</note>
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>Format rental and return date to numeric &quot;smart key&quot; values</note>
+      <note>Format rental and return date to numeric &#x22;smart key&#x22; values</note>
       <xloc>485</xloc>
       <yloc>105</yloc>
-      <width>313</width>
+      <width>327</width>
       <heigth>28</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -109,11 +117,10 @@ Pull new&#47;updated rentals out of source database</note>
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>If there is a return date, calculate rental duration and rental count
-else, set rental duration to NULL and rental count to zero</note>
+      <note>If there is a return date, calculate rental duration and rental count&#xa;else, set rental duration to NULL and rental count to zero</note>
       <xloc>486</xloc>
       <yloc>174</yloc>
-      <width>340</width>
+      <width>353</width>
       <heigth>46</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -131,10 +138,10 @@ else, set rental duration to NULL and rental count to zero</note>
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>Lookup film_id and store_id (using inventory)</note>
+      <note>Lookup film_id and store_id &#x28;using inventory&#x29;</note>
       <xloc>487</xloc>
       <yloc>274</yloc>
-      <width>232</width>
+      <width>249</width>
       <heigth>28</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -152,11 +159,10 @@ else, set rental duration to NULL and rental count to zero</note>
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>Initialize a constant helper value to single out the 
-latest record version from the SCD2 dimension tables</note>
+      <note>Initialize a constant helper value to single out the &#xa;latest record version from the SCD2 dimension tables</note>
       <xloc>911</xloc>
       <yloc>340</yloc>
-      <width>277</width>
+      <width>290</width>
       <heigth>46</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -174,8 +180,7 @@ latest record version from the SCD2 dimension tables</note>
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>Lookup the key from the type 2 slowly changing dimension
-for the appropriate version of the record at the time of the rental</note>
+      <note>Lookup the key from the type 2 slowly changing dimension&#xa;for the appropriate version of the record at the time of the rental</note>
       <xloc>487</xloc>
       <yloc>407</yloc>
       <width>337</width>
@@ -199,7 +204,7 @@ for the appropriate version of the record at the time of the rental</note>
       <note>Load the rental fact table</note>
       <xloc>498</xloc>
       <yloc>504</yloc>
-      <width>136</width>
+      <width>142</width>
       <heigth>28</heigth>
       <fontname/>
       <fontsize>-1</fontsize>
@@ -218,77 +223,81 @@ for the appropriate version of the record at the time of the rental</note>
     </notepad>
   </notepads>
   <connection>
-    <name>sakila</name>
+    <name>pagila</name>
     <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>sakila</database>
+    <type>POSTGRESQL</type>
+    <access>JNDI</access>
+    <database>pagila</database>
     <port>3306</port>
-    <username>sakila</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79bd71d59ba3db</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
-    <name>sakila_dwh</name>
+    <name>pagila</name>
     <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>sakila_dwh</database>
+    <type>POSTGRESQL</type>
+    <access>JNDI</access>
+    <database>pagila</database>
     <port>3306</port>
-    <username>sakila_dwh</username>
-    <password>Encrypted 2be98afc86aa78185a010a271e196b8d2</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
-  <hop> <from>max_fact_rental_last_update</from><to>Get New Rentals to load</to><enabled>Y</enabled> </hop>  <hop> <from>Get New Rentals to load</from><to>Get date and time keys</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup film_id and store_id (from inventory)</from><to>lookup film key</to><enabled>Y</enabled> </hop>  <hop> <from>Get date and time keys</from><to>return date?</to><enabled>Y</enabled> </hop>  <hop> <from>return date?</from><to>calculate rental duration</to><enabled>Y</enabled> </hop>  <hop> <from>return date?</from><to>rental duration null</to><enabled>Y</enabled> </hop>  <hop> <from>calculate rental duration</from><to>Lookup film_id and store_id (from inventory)</to><enabled>Y</enabled> </hop>  <hop> <from>rental duration null</from><to>Lookup film_id and store_id (from inventory)</to><enabled>Y</enabled> </hop>  <hop> <from>lookup film key</from><to>Lookup dim customer key</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup dim customer key</from><to>Lookup dim staff key</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup dim staff key</from><to>Lookup dim store key</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup dim store key</from><to>Insert &#47; Update</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>max_fact_rental_last_update</from><to>Get New Rentals to load</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get New Rentals to load</from><to>Get date and time keys</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup film_id and store_id &#x28;from inventory&#x29;</from><to>lookup film key</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get date and time keys</from><to>return date&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>return date&#x3f;</from><to>calculate rental duration</to><enabled>Y</enabled> </hop>
+  <hop> <from>return date&#x3f;</from><to>rental duration null</to><enabled>Y</enabled> </hop>
+  <hop> <from>calculate rental duration</from><to>Lookup film_id and store_id &#x28;from inventory&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>rental duration null</from><to>Lookup film_id and store_id &#x28;from inventory&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup film key</from><to>Lookup dim customer key</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup dim customer key</from><to>Lookup dim staff key</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup dim staff key</from><to>Lookup dim store key</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup dim store key</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Insert &#x2f; Update</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Get New Rentals to load</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila</connection>
-    <sql>SELECT
-  rental_id
-, rental_date
-, return_date
-, inventory_id
-, customer_id
-, staff_id
-FROM rental
-WHERE last_update &gt; ?</sql>
+    <connection>pagila</connection>
+    <sql>SELECT&#xa;  rental_id&#xa;, rental_date&#xa;, return_date&#xa;, inventory_id&#xa;, customer_id&#xa;, staff_id&#xa;FROM rental&#xa;WHERE last_update &#x3e; &#x3f;</sql>
     <limit>0</limit>
     <lookup>max_fact_rental_last_update</lookup>
     <execute_each_row>Y</execute_each_row>
@@ -307,6 +316,7 @@ WHERE last_update &gt; ?</sql>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -343,6 +353,10 @@ WHERE last_update &gt; ?</sql>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -354,6 +368,10 @@ WHERE last_update &gt; ?</sql>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>HHmmss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -365,6 +383,10 @@ WHERE last_update &gt; ?</sql>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>yyyyMMdd</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -376,6 +398,10 @@ WHERE last_update &gt; ?</sql>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>HHmmss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -390,25 +416,26 @@ WHERE last_update &gt; ?</sql>
     </step>
 
   <step>
-    <name>Insert &#47; Update</name>
+    <name>Insert &#x2f; Update</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila_dwh</connection>
+    <connection>pagila</connection>
     <commit>10000</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
-      <schema/>
+      <schema>dw</schema>
       <table>fact_rental</table>
       <key>
         <name>rental_id</name>
         <field>rental_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -464,8 +491,8 @@ WHERE last_update &gt; ?</sql>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>442</xloc>
-      <yloc>509</yloc>
+      <xloc>448</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -475,14 +502,15 @@ WHERE last_update &gt; ?</sql>
     <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <schema/>
+      <schema>dw</schema>
       <table>dim_customer</table>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <commit>100</commit>
       <update>N</update>
       <fields>
@@ -524,14 +552,15 @@ WHERE last_update &gt; ?</sql>
     <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <schema/>
+      <schema>dw</schema>
       <table>dim_staff</table>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <commit>100</commit>
       <update>N</update>
       <fields>
@@ -573,14 +602,15 @@ WHERE last_update &gt; ?</sql>
     <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-      <schema/>
+      <schema>dw</schema>
       <table>dim_store</table>
-      <connection>sakila_dwh</connection>
+      <connection>pagila</connection>
       <commit>100</commit>
       <update>N</update>
       <fields>
@@ -618,16 +648,17 @@ WHERE last_update &gt; ?</sql>
     </step>
 
   <step>
-    <name>Lookup film_id and store_id (from inventory)</name>
+    <name>Lookup film_id and store_id &#x28;from inventory&#x29;</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila</connection>
+    <connection>pagila</connection>
     <cache>Y</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -640,7 +671,7 @@ WHERE last_update &gt; ?</sql>
       <key>
         <name>inventory_id</name>
         <field>inventory_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -669,6 +700,7 @@ WHERE last_update &gt; ?</sql>
     <type>Calculator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -757,17 +789,18 @@ WHERE last_update &gt; ?</sql>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila_dwh</connection>
+    <connection>pagila</connection>
     <cache>Y</cache>
     <cache_load_all>Y</cache_load_all>
     <cache_size>0</cache_size>
     <lookup>
-      <schema/>
+      <schema>dw</schema>
       <table>dim_film</table>
       <orderby/>
       <fail_on_multiple>Y</fail_on_multiple>
@@ -775,7 +808,7 @@ WHERE last_update &gt; ?</sql>
       <key>
         <name>film_id</name>
         <field>film_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -798,19 +831,14 @@ WHERE last_update &gt; ?</sql>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>sakila_dwh</connection>
-    <sql>SELECT
-	coalesce(
-		max(rental_last_update),
-		&apos;1970-01-01&apos;
-	)
-FROM fact_rental
-</sql>
+    <connection>pagila</connection>
+    <sql>SELECT&#xa;	coalesce&#x28;&#xa;		max&#x28;rental_last_update&#x29;,&#xa;		&#x27;1970-01-01&#x27;&#xa;	&#x29;&#xa;FROM dw.fact_rental&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -829,6 +857,7 @@ FROM fact_rental
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -845,6 +874,7 @@ FROM fact_rental
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>count_returns</name>
@@ -856,6 +886,7 @@ FROM fact_rental
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>return_date_key1</name>
@@ -867,6 +898,7 @@ FROM fact_rental
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -878,10 +910,11 @@ FROM fact_rental
     </step>
 
   <step>
-    <name>return date?</name>
+    <name>return date&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -905,9 +938,166 @@ FROM fact_rental
       </GUI>
     </step>
 
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>rental_time_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>rental_date_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>return_time_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>return_date_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>rental_datetime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>return_datetime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customer_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>inventory_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>rental_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>staff_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>rental_duration</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>count_returns</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>return_date_key1</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>store_id</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>film_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customer_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>staff_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>store_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>rental_time_key</name>
+        <rename>rental_time_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>0000000000000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>rental_date_key</name>
+        <rename>rental_date_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>0000000000000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>return_time_key</name>
+        <rename>return_time_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>0000000000000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>return_date_key</name>
+        <rename>return_date_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>0000000000000</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>448</xloc>
+      <yloc>512</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
